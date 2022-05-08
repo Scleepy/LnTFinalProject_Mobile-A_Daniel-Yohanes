@@ -86,7 +86,7 @@
                 android:id="@+id/textNumberCounter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10"
+                android:text="Keep it going!"
                 android:layout_marginTop="5dp"
                 android:textColor="#FFC300"
                 android:fontFamily="@font/futura_heavy"
