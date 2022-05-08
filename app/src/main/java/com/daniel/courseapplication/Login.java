@@ -142,21 +142,26 @@ public class Login extends AppCompatActivity {
                                         String name = String.valueOf(task.getResult().child("name").getValue());
                                         String courseID = String.valueOf(task.getResult().child("courseID").getValue());
                                         String email = String.valueOf(task.getResult().child("email").getValue());
-                                        String progressCounter = String.valueOf(task.getResult().child("email").getValue());
+                                        String progressCounter = String.valueOf(task.getResult().child("progressCounter").getValue());
                                         String progressToday = String.valueOf(task.getResult().child("progressToday").getValue());
                                         String progressTotal = String.valueOf(task.getResult().child("progressTotal").getValue());
                                         String totalExp = String.valueOf(task.getResult().child("totalExp").getValue());
+                                        String date = String.valueOf(task.getResult().child("date").getValue());
 
                                         editorUser.putString("NAME", name);
                                         editorUser.putString("COURSEID", courseID);
+                                        editorUser.putString("EMAIL", email);
                                         editorUser.putString("PROGRESSCOUNTER", progressCounter);
                                         editorUser.putString("PROGRESSTODAY", progressToday);
                                         editorUser.putString("PROGRESSTOTAL", progressTotal);
                                         editorUser.putString("TOTALEXP", totalExp);
+                                        editorUser.putString("DATE", date);
                                         editorUser.apply();
 
                                     }
                                     Toast.makeText(view.getContext(), "Login successful!", Toast.LENGTH_SHORT).show();
+
+                                    MainActivity.mainActivity.finish();
 
                                     Intent intent = new Intent(view.getContext(), HomeScreen.class);
                                     startActivity(intent);
@@ -175,9 +180,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void backButtonLogin(View view){
-        Intent intent = new Intent(view.getContext(), MainActivity.class);
-        startActivity(intent);
-        finish();
+        super.onBackPressed();
     }
 
 

@@ -8,7 +8,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class FragmentAdapter extends FragmentStateAdapter {
 
-
     public FragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
     }
@@ -21,15 +20,13 @@ public class FragmentAdapter extends FragmentStateAdapter {
             return new counter();
         } else if (position == 1){
             return new area();
-        } else if (position == 2){
-            return new volume();
         } else {
-            return new userProfile2();
+            return new volume();
         }
     }
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 3;
     }
 }

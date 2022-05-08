@@ -3,8 +3,10 @@ package com.daniel.courseapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -33,6 +35,8 @@ public class Signup extends AppCompatActivity {
     EditText courseEditText, nameEditText, emailEditText, passwordEditText, confirmPasswordEditText;
 
     Button backButtonSignup;
+
+    Dialog loadDialog;
 
     private FirebaseAuth mAuth;
     private FirebaseUser user;
@@ -123,13 +127,20 @@ public class Signup extends AppCompatActivity {
             return;
         }
 
+        loadDialog = new Dialog(this);
+        loadDialog.setContentView(R.layout.dialog_loading);
+        loadDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        loadDialog.setCancelable(false);
+
+        loadDialog.show();
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
 
-                            User newUser = new User(name, email, password, courseID, 0, 0, 0, 0);
+                            User newUser = new User(name, email, password, courseID);
 
                             String UUID = mAuth.getCurrentUser().getUid();
 
@@ -142,20 +153,15 @@ public class Signup extends AppCompatActivity {
                             finish();
 
                         } else {
-                            Toast.makeText(view.getContext(), "Account registered!", Toast.LENGTH_SHORT).show();
+                            loadDialog.cancel();
+                            Toast.makeText(view.getContext(), "Registration failed!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
     }
 
     public void backButtonSignup(View view){
-
-        Intent intent = new Intent(view.getContext(), MainActivity.class);
-        startActivity(intent);
-        finish();
-
-
-
+        super.onBackPressed();
     }
 
 

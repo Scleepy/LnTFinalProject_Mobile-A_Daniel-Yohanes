@@ -7,14 +7,17 @@
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/ic_help_background.xml" value="0.184" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/navpanel.xml" value="0.1" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/panel.xml" value="0.1985" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/progresspanel.xml" value="0.2425" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/shadowpanel.xml" value="0.1785" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/user.xml" value="0.2155" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/userfield.xml" value="0.2" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/volume.xml" value="0.2155" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_home_screen.xml" value="0.16799999999999998" />
-        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_login.xml" value="0.47484662576687114" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_main_screen.xml" value="0.19410004275331338" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_signup.xml" value="0.264" />
-        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_user_profile.xml" value="0.18177697189483227" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_user_profile.xml" value="0.536" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/appbar.xml" value="0.25" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/content_user_profile.xml" value="0.18177697189483227" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/dialog_loading.xml" value="0.264" />

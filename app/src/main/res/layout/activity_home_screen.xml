@@ -19,6 +19,7 @@
         app:layout_constraintEnd_toStartOf="@+id/viewPager2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineNavButton"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottommenu" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -71,6 +72,18 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.appcompat.widget.Toolbar>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guidelineContentStart"
@@ -150,19 +163,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/more">
             </ImageView>
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/appbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="openProfile"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </androidx.appcompat.widget.Toolbar>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

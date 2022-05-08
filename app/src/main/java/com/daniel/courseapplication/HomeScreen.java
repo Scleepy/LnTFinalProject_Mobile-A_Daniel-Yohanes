@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -40,8 +41,13 @@ public class HomeScreen extends AppCompatActivity {
 
     TextView usernameTextView, courseIDTextView;
 
+    public static Activity homeScreenActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        homeScreenActivity = this;
+
         super.onCreate(savedInstanceState);
 
         Window window = getWindow();
@@ -60,7 +66,6 @@ public class HomeScreen extends AppCompatActivity {
 
         String name = userInfoSharedPreferences.getString("NAME", "");
         String courseID = userInfoSharedPreferences.getString("COURSEID", "");
-        String email = userInfoSharedPreferences.getString("EMAIL", "");
 
         usernameTextView = findViewById(R.id.usernameText);
         courseIDTextView = findViewById(R.id.userClassID);
@@ -86,11 +91,8 @@ public class HomeScreen extends AppCompatActivity {
                     case(R.id.areafragment):
                         viewPager2.setCurrentItem(1);
                         break;
-                    case(R.id.volumefragment):
-                        viewPager2.setCurrentItem(2);
-                        break;
                     default:
-                        viewPager2.setCurrentItem(3);
+                        viewPager2.setCurrentItem(2);
                         break;
                 }
 
@@ -108,11 +110,8 @@ public class HomeScreen extends AppCompatActivity {
                     case 1:
                         navBar.getMenu().findItem(R.id.areafragment).setChecked(true);
                         break;
-                    case 2:
-                        navBar.getMenu().findItem(R.id.volumefragment).setChecked(true);
-                        break;
                     default:
-                        navBar.getMenu().findItem(R.id.userProfilefragment).setChecked(true);
+                        navBar.getMenu().findItem(R.id.volumefragment).setChecked(true);
                         break;
                 }
             }

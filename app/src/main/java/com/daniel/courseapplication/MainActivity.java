@@ -3,6 +3,7 @@ package com.daniel.courseapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -38,9 +39,13 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
+    public static Activity mainActivity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        mainActivity = this;
 
         super.onCreate(savedInstanceState);
 
