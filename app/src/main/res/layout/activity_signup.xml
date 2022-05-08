@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC300"
+    tools:context=".Signup">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutPanelSignup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/panel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTextSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTextCourseID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.27" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTextEmailSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.39" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTextPasswordSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.51" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTextConfirmPasswordSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.63" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineSubmitSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.78" />
+
+        <TextView
+            android:id="@+id/titleLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_extra_black"
+            android:text="Sign Up"
+            android:textColor="#2C272E"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextSignup"
+            app:layout_constraintWidth_percent="0.53" />
+
+        <TextView
+            android:id="@+id/titleCourseID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_heavy"
+            android:text="Course ID"
+            android:textColor="#2C272E"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextCourseID"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <EditText
+            android:id="@+id/editTextCourseID"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/userfield"
+            android:ems="10"
+            android:fontFamily="@font/futura_heavy"
+            android:hint="CR-XXXXXX"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="#B1AFBB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleCourseID"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_heavy"
+            android:text="Name"
+            android:textColor="#2C272E"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextName"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/userfield"
+            android:ems="10"
+            android:fontFamily="@font/futura_heavy"
+            android:hint="Min. 5 Characters"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="#B1AFBB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleName"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <TextView
+            android:id="@+id/titleEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_heavy"
+            android:text="Email"
+            android:textColor="#2C272E"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextEmailSignUp"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <EditText
+            android:id="@+id/editTextEmailAddressSignup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/userfield"
+            android:ems="10"
+            android:fontFamily="@font/futura_heavy"
+            android:hint="name@mail.com"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="#B1AFBB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleEmail"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <TextView
+            android:id="@+id/titlePasswordSignup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_heavy"
+            android:text="Password"
+            android:textColor="#2C272E"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextPasswordSignUp"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <EditText
+            android:id="@+id/editTextPasswordSignup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/userfield"
+            android:ems="10"
+            android:fontFamily="@font/futura_heavy"
+            android:hint="Min. 5 Characters"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="#B1AFBB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titlePasswordSignup"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <TextView
+            android:id="@+id/titleConfirmPasswordSignup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_heavy"
+            android:text="Confirm Password"
+            android:textColor="#2C272E"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextConfirmPasswordSignUp"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <EditText
+            android:id="@+id/editTextConfirmPasswordSignup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/userfield"
+            android:ems="10"
+            android:fontFamily="@font/futura_heavy"
+            android:hint="Min. 5 Characters"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="#B1AFBB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleConfirmPasswordSignup"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <Button
+            android:id="@+id/submitSignup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#F55353"
+            android:fontFamily="@font/futura_heavy"
+            android:letterSpacing="0.05"
+            android:onClick="attemptSignup"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:stateListAnimator="@null"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:cornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineSubmitSignup"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <TextView
+            android:id="@+id/textNoAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/futura_heavy"
+            android:text="Have an account? Login"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submitSignup" />
+
+        <ImageView
+            android:id="@+id/backButtonSignupID"
+            android:layout_width="31dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:onClick="backButtonSignup"
+            app:layout_constraintEnd_toStartOf="@+id/titleLogin"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextSignup"
+            app:srcCompat="@drawable/backbutton" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

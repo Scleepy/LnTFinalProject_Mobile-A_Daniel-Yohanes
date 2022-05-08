@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/ic_fox_login.xml" value="0.2425" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/ic_help_background.xml" value="0.184" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/navpanel.xml" value="0.1" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/panel.xml" value="0.1985" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/shadowpanel.xml" value="0.1785" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/userfield.xml" value="0.2" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_home_screen.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_login.xml" value="0.47484662576687114" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_main_screen.xml" value="0.19410004275331338" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_user_profile.xml" value="0.18177697189483227" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/appbar.xml" value="0.25" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/content_user_profile.xml" value="0.18177697189483227" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/dialog_loading.xml" value="0.264" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_area.xml" value="0.1955128205128205" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_counter.xml" value="0.2" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_first.xml" value="0.18177697189483227" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_home_screen.xml" value="0.2" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_second.xml" value="0.18177697189483227" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_user_profile.xml" value="0.2" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_volume.xml" value="0.2" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/help.xml" value="0.2" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/menu/bottommenu.xml" value="0.16545532278751604" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

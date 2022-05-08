@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "454086329490",
+    "project_id": "course-application-59e05",
+    "storage_bucket": "course-application-59e05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454086329490:android:71626d90ea60236cc1924b",
+        "android_client_info": {
+          "package_name": "com.daniel.courseapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454086329490-burko1o8jmqjnk22cg4udpj5distiq0r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5xmDMGEjChiOIrh_2z92TluD5xO_heU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454086329490-burko1o8jmqjnk22cg4udpj5distiq0r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
