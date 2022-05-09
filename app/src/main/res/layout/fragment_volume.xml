@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.15" />
+            app:layout_constraintGuide_percent="0.079" />
 
         <TextView
             android:id="@+id/titleVolumeCalculator"
@@ -93,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
-                android:text="Area = S³"
+                android:text="Volume = S³"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/iconCube"
@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
-                android:text="Area = ?³"
+                android:text="Volume = ?³"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -153,7 +153,7 @@
                 app:layout_constraintVertical_bias="0.060000002" />
 
             <EditText
-                android:id="@+id/editTextLengthSquare"
+                android:id="@+id/editTextSideSquare"
                 android:layout_width="130dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -179,7 +179,7 @@
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guidelineCubeProcess"
-                app:layout_constraintTop_toBottomOf="@+id/editTextLengthSquare"
+                app:layout_constraintTop_toBottomOf="@+id/editTextSideSquare"
                 app:layout_constraintVertical_bias="0.100000024" />
 
             <EditText
@@ -188,11 +188,8 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:background="@drawable/userfieldwhite"
-                android:clickable="false"
-                android:cursorVisible="true"
                 android:fontFamily="@font/futura_heavy"
                 android:hint="Input side"
-                android:inputType="number"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:textColorHint="#000000"
@@ -201,9 +198,670 @@
                 app:layout_constraintStart_toStartOf="@+id/guidelineCubeProcess"
                 app:layout_constraintTop_toBottomOf="@+id/resultTitleCube" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/squarePyramidCalculatorContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cubeCalculatorContainer">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineSquarePyramidImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.095" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineSquarePyramidProcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51" />
+
+            <ImageView
+                android:id="@+id/squarePyramidPanel"
+                android:layout_width="350dp"
+                android:layout_height="380dp"
+                android:src="@drawable/trianglearea"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/resultTitleSquarePyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Result: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/editTextHeightSquarePyramid"
+                app:layout_constraintVertical_bias="0.100000024" />
+
+            <EditText
+                android:id="@+id/resultTextSquarePyramid"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfieldwhite"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Input values"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                android:textSize="12sp"
+                app:layout_constraintHeight_percent="0.10"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/resultTitleSquarePyramid" />
+
+            <EditText
+                android:id="@+id/editTextBaseSquarePyramid"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfield"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Ex: 22"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#B1AFBB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/baseTitleSquarePyramid" />
+
+            <TextView
+                android:id="@+id/baseTitleSquarePyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Base:  "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/formulaSquarePyramid"
+                app:layout_constraintVertical_bias="0.04" />
+
+            <EditText
+                android:id="@+id/editTextHeightSquarePyramid"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/userfield"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Ex: 32"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#B1AFBB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/heightTitleSquarePyramid" />
+
+            <TextView
+                android:id="@+id/heightTitleSquarePyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Height:  "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/editTextBaseSquarePyramid"
+                app:layout_constraintVertical_bias="0.062" />
+
+            <TextView
+                android:id="@+id/titleProcessSquarePyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Process"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/squarePyramidCalculatorContainer"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidProcess"
+                app:layout_constraintTop_toTopOf="@+id/squarePyramidCalculatorContainer"
+                app:layout_constraintVertical_bias="0.10" />
+
+            <TextView
+                android:id="@+id/attrSquarePyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="B = Base\nH = Height"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/iconSquarePyramid"
+                app:layout_constraintStart_toStartOf="@id/guidelineSquarePyramidImg"
+                app:layout_constraintTop_toBottomOf="@id/processSquarePyramid" />
+
+            <ImageView
+                android:id="@+id/iconSquarePyramid"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="@+id/squarePyramidCalculatorContainer"
+                app:layout_constraintStart_toStartOf="@id/guidelineSquarePyramidImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.75"
+                app:srcCompat="@drawable/squarepyramidicon" />
+
+            <TextView
+                android:id="@+id/squarePyramidTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Square\nPyramid"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/iconSquarePyramid"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <ImageView
+                android:id="@+id/processSquarePyramid"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toTopOf="@+id/iconSquarePyramid"
+                app:layout_constraintStart_toStartOf="@id/guidelineSquarePyramidImg"
+                app:layout_constraintTop_toBottomOf="@+id/squarePyramidTitle"
+                app:layout_constraintVertical_bias="0.060000002"
+                app:srcCompat="@drawable/volumesquarepyramid" />
+
+            <TextView
+                android:id="@+id/formulaSquarePyramid"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Volume =     x ? x ?"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/titleProcessSquarePyramid"
+                app:layout_constraintVertical_bias="0.01999998" />
+
+            <ImageView
+                android:id="@+id/fractionOver3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/fractionsquarepyramid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.44"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/titleProcessSquarePyramid" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rectangularPyramidCalculatorContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/squarePyramidCalculatorContainer">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRectangularPyramidImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.095" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRectangularPyramidProcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51" />
+
+            <ImageView
+                android:id="@+id/rectangularPyramidPanel"
+                android:layout_width="350dp"
+                android:layout_height="450dp"
+                android:src="@drawable/type3panel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iconRectangularPyramid"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectangularPyramidPanel"
+                app:layout_constraintStart_toStartOf="@id/guidelineRectangularPyramidImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.85"
+                app:srcCompat="@drawable/recpyramidicon" />
+
+            <TextView
+                android:id="@+id/rectangularPyramidTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Rectangular"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/iconRectangularPyramid"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.15" />
+
+            <TextView
+                android:id="@+id/rectangularPyramidTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Pyramid"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidImg"
+                app:layout_constraintTop_toBottomOf="@+id/rectangularPyramidTitle1" />
+
+            <ImageView
+                android:id="@+id/processRectangularPyramid"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:src="@drawable/formularectangularpyramid"
+                app:layout_constraintBottom_toTopOf="@id/iconRectangularPyramid"
+                app:layout_constraintStart_toStartOf="@id/guidelineRectangularPyramidImg"
+                app:layout_constraintTop_toBottomOf="@+id/rectangularPyramidTitle2"
+                app:layout_constraintVertical_bias="0.120000005" />
+
+            <TextView
+                android:id="@+id/attrRectangularPyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="L = Length\n W = Width\nH = Height"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/iconRectangularPyramid"
+                app:layout_constraintStart_toStartOf="@id/guidelineRectangularPyramidImg"
+                app:layout_constraintTop_toBottomOf="@id/processRectangularPyramid" />
+
+            <TextView
+                android:id="@+id/titleProcessRectangularPyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Process"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectangularPyramidCalculatorContainer"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toTopOf="@+id/rectangularPyramidCalculatorContainer"
+                app:layout_constraintVertical_bias="0.11" />
+
+            <TextView
+                android:id="@+id/formulaRectangularPyramid"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Volume =     x ? x ? x ?"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/titleProcessRectangularPyramid"
+                app:layout_constraintVertical_bias="0.01999998" />
+
+            <ImageView
+                android:id="@+id/fractionOver3RectangularPyramid"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/fractionsquarepyramid"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.44"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/titleProcessRectangularPyramid" />
+
+            <TextView
+                android:id="@+id/lengthTitleRectangularPyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Length:  "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/formulaRectangularPyramid"
+                app:layout_constraintVertical_bias="0.01" />
+
+            <EditText
+                android:id="@+id/editTextLengthRectangularPyramid"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfield"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Ex: 22"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#B1AFBB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/lengthTitleRectangularPyramid" />
+
+            <TextView
+                android:id="@+id/widthTitleRectangularPyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Width:  "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/editTextLengthRectangularPyramid"
+                app:layout_constraintVertical_bias="0.050000012" />
+
+            <EditText
+                android:id="@+id/editTextWidthRectangularPyramid"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfield"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Ex: 64"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#B1AFBB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/widthTitleRectangularPyramid" />
+
+            <TextView
+                android:id="@+id/heightTitleRectangularPyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Height:  "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/editTextWidthRectangularPyramid"
+                app:layout_constraintVertical_bias="0.050000012" />
+
+            <EditText
+                android:id="@+id/editTextHeightRectangularPyramid"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfield"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Ex: 34"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#B1AFBB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/heightTitleRectangularPyramid" />
+
+            <TextView
+                android:id="@+id/resultTitleRectangularPyramid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Result: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/editTextHeightRectangularPyramid"
+                app:layout_constraintVertical_bias="0.100000024" />
+
+            <EditText
+                android:id="@+id/resultTextRectangularPyramid"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfieldwhite"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Input values"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                android:textSize="12sp"
+                app:layout_constraintHeight_percent="0.10"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
+                app:layout_constraintTop_toBottomOf="@+id/resultTitleRectangularPyramid" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cylinderCalculatorContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rectangularPyramidCalculatorContainer">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCylinderImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.095" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCylinderProcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51" />
+
+            <ImageView
+                android:id="@+id/cylinderPanel"
+                android:layout_width="350dp"
+                android:layout_height="380dp"
+                android:src="@drawable/trianglearea"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/resultTitleCylinder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Result: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCylinderProcess"
+                app:layout_constraintTop_toBottomOf="@+id/editTextHeightCylinder"
+                app:layout_constraintVertical_bias="0.100000024" />
+
+            <EditText
+                android:id="@+id/resultTextCylinder"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfieldwhite"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Input values"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                android:textSize="12sp"
+                app:layout_constraintHeight_percent="0.10"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCylinderProcess"
+                app:layout_constraintTop_toBottomOf="@+id/resultTitleCylinder" />
+
+            <EditText
+                android:id="@+id/editTextRadiusCylinder"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfield"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Ex: 22"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#B1AFBB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCylinderProcess"
+                app:layout_constraintTop_toBottomOf="@+id/baseTitleCylinder" />
+
+            <TextView
+                android:id="@+id/baseTitleCylinder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Radius:  "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCylinderProcess"
+                app:layout_constraintTop_toBottomOf="@+id/formulaCylinder"
+                app:layout_constraintVertical_bias="0.01" />
+
+            <EditText
+                android:id="@+id/editTextHeightCylinder"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/userfield"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Ex: 32"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#B1AFBB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCylinderProcess"
+                app:layout_constraintTop_toBottomOf="@+id/heightTitleCylinder" />
+
+            <TextView
+                android:id="@+id/heightTitleCylinder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Height:  "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCylinderProcess"
+                app:layout_constraintTop_toBottomOf="@+id/editTextRadiusCylinder"
+                app:layout_constraintVertical_bias="0.062" />
+
+            <TextView
+                android:id="@+id/titleProcessCylinder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Process"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cylinderCalculatorContainer"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCylinderProcess"
+                app:layout_constraintTop_toTopOf="@+id/cylinderCalculatorContainer"
+                app:layout_constraintVertical_bias="0.12" />
+
+            <TextView
+                android:id="@+id/attrCylinder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="R = Radius\nH = Height"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/iconCylinder"
+                app:layout_constraintStart_toStartOf="@id/guidelineCylinderImg"
+                app:layout_constraintTop_toBottomOf="@id/processCylinder" />
+
+            <ImageView
+                android:id="@+id/iconCylinder"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cylinderCalculatorContainer"
+                app:layout_constraintStart_toStartOf="@id/guidelineCylinderImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.75"
+                app:srcCompat="@drawable/cylindericon" />
+
+            <TextView
+                android:id="@+id/cylinderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Cylinder"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/iconCylinder"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCylinderImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.25" />
+
+
+            <TextView
+                android:id="@+id/processCylinder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Volume\nπ x R² x H"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/iconCylinder"
+                app:layout_constraintStart_toStartOf="@id/guidelineCylinderImg"
+                app:layout_constraintTop_toBottomOf="@+id/cylinderTitle"
+                app:layout_constraintVertical_bias="0.19999999" />
+
+            <TextView
+                android:id="@+id/formulaCylinder"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Volume = π x ?² x ?"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCylinderProcess"
+                app:layout_constraintTop_toBottomOf="@+id/titleProcessCylinder"
+                app:layout_constraintVertical_bias="0.01999998" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/panelExtraVolume"
+            android:layout_width="345dp"
+            android:layout_height="100dp"
+            android:src="@drawable/navpanel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cylinderCalculatorContainer"
+            />
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
