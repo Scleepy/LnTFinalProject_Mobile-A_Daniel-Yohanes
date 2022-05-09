@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideLineTextAreaCalculator"
+            android:id="@+id/guidelineTitleArea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -28,7 +28,7 @@
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideLineTextAreaCalculator"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTitleArea"
             app:layout_constraintWidth_percent="0.8" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -41,14 +41,14 @@
             app:layout_constraintTop_toBottomOf="@+id/titleAreaCalculator">
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideLineAreaImage"
+                android:id="@+id/guidelineSquareImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.095" />
+                app:layout_constraintGuide_percent="0.1" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideLineAreaImage2"
+                android:id="@+id/guidelineSquareProcess"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -65,30 +65,30 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/iconSquare"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 app:layout_constraintBottom_toBottomOf="@+id/squarePanel"
-                app:layout_constraintStart_toStartOf="@id/guideLineAreaImage"
+                app:layout_constraintStart_toStartOf="@id/guidelineSquareImg"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.75"
                 app:srcCompat="@drawable/areaicon" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/squareTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
                 android:text="Square"
                 android:textColor="#000000"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/imageView5"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaImage"
+                app:layout_constraintBottom_toTopOf="@+id/iconSquare"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquareImg"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.36" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/titleProcessSquare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
@@ -96,38 +96,38 @@
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="@+id/squarePanel"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaImage2"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquareProcess"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.16000003" />
+                app:layout_constraintVertical_bias="0.11" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/processSquare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
                 android:text="Area = S x S"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/imageView5"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaImage"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintBottom_toTopOf="@+id/iconSquare"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquareImg"
+                app:layout_constraintTop_toBottomOf="@+id/squareTitle"
                 app:layout_constraintVertical_bias="0.19999999" />
 
             <TextView
-                android:id="@+id/processTextSquare"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/formulaSquare"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
                 android:fontFamily="@font/futura_heavy"
                 android:text="Area = ? x ?"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaImage2"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquareProcess"
+                app:layout_constraintTop_toBottomOf="@+id/titleProcessSquare"
                 app:layout_constraintVertical_bias="0.08" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/lengthTitleSquare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
@@ -135,12 +135,12 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaImage2"
-                app:layout_constraintTop_toBottomOf="@+id/processTextSquare"
-                app:layout_constraintVertical_bias="0.060000002" />
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquareProcess"
+                app:layout_constraintTop_toBottomOf="@+id/formulaSquare"
+                app:layout_constraintVertical_bias="0.01" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/resultTitleSquare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
@@ -148,21 +148,21 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaImage2"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquareProcess"
                 app:layout_constraintTop_toBottomOf="@+id/editTextLengthSquare"
                 app:layout_constraintVertical_bias="0.100000024" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/attrSquare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
                 android:text="S = Side"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/imageView5"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaImage"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintBottom_toTopOf="@+id/iconSquare"
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquareImg"
+                app:layout_constraintTop_toBottomOf="@+id/processSquare" />
 
             <EditText
                 android:id="@+id/editTextLengthSquare"
@@ -178,8 +178,8 @@
                 android:textColorHint="#B1AFBB"
                 android:textSize="12sp"
                 app:layout_constraintHeight_percent="0.10"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaImage2"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquareProcess"
+                app:layout_constraintTop_toBottomOf="@+id/lengthTitleSquare" />
 
             <EditText
                 android:id="@+id/resultTextSquare"
@@ -195,8 +195,8 @@
                 android:textColorHint="#000000"
                 android:textSize="12sp"
                 app:layout_constraintHeight_percent="0.10"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaImage2"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                app:layout_constraintStart_toStartOf="@+id/guidelineSquareProcess"
+                app:layout_constraintTop_toBottomOf="@+id/resultTitleSquare" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -209,14 +209,14 @@
             app:layout_constraintTop_toBottomOf="@+id/squareCalculatorContainer">
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideLineTriangleImage"
+                android:id="@+id/guidelineTriangleImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.095" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideLineAreaTriangle"
+                android:id="@+id/guidelineTriangleProcess"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -234,7 +234,7 @@
 
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/resultTitleTriangle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
@@ -242,7 +242,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaTriangle"
+                app:layout_constraintStart_toStartOf="@+id/guidelineTriangleProcess"
                 app:layout_constraintTop_toBottomOf="@+id/editTextHeightTriangle"
                 app:layout_constraintVertical_bias="0.100000024" />
 
@@ -260,8 +260,8 @@
                 android:textColorHint="#000000"
                 android:textSize="12sp"
                 app:layout_constraintHeight_percent="0.10"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaTriangle"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                app:layout_constraintStart_toStartOf="@+id/guidelineTriangleProcess"
+                app:layout_constraintTop_toBottomOf="@+id/resultTitleTriangle" />
 
             <EditText
                 android:id="@+id/editTextBaseTriangle"
@@ -276,11 +276,11 @@
                 android:paddingEnd="10dp"
                 android:textColorHint="#B1AFBB"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaTriangle"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                app:layout_constraintStart_toStartOf="@+id/guidelineTriangleProcess"
+                app:layout_constraintTop_toBottomOf="@+id/baseTitleTriangle" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/baseTitleTriangle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
@@ -288,9 +288,9 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaTriangle"
+                app:layout_constraintStart_toStartOf="@+id/guidelineTriangleProcess"
                 app:layout_constraintTop_toBottomOf="@+id/formulaTriangle"
-                app:layout_constraintVertical_bias="0.050000012" />
+                app:layout_constraintVertical_bias="0.01" />
 
             <EditText
                 android:id="@+id/editTextHeightTriangle"
@@ -305,11 +305,11 @@
                 android:paddingEnd="10dp"
                 android:textColorHint="#B1AFBB"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaTriangle"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                app:layout_constraintStart_toStartOf="@+id/guidelineTriangleProcess"
+                app:layout_constraintTop_toBottomOf="@+id/heightTitleTriangle" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/heightTitleTriangle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
@@ -317,12 +317,12 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaTriangle"
+                app:layout_constraintStart_toStartOf="@+id/guidelineTriangleProcess"
                 app:layout_constraintTop_toBottomOf="@+id/editTextBaseTriangle"
                 app:layout_constraintVertical_bias="0.062" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/titleProcessTriangle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
@@ -330,7 +330,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="@+id/trianglePanel"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaTriangle"
+                app:layout_constraintStart_toStartOf="@+id/guidelineTriangleProcess"
                 app:layout_constraintTop_toTopOf="@+id/trianglePanel"
                 app:layout_constraintVertical_bias="0.13" />
 
@@ -342,65 +342,65 @@
                 android:text="B = Base\nH = Height"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/imageTriangle"
-                app:layout_constraintStart_toStartOf="@id/guideLineTriangleImage"
-                app:layout_constraintTop_toBottomOf="@id/imageTriangleFormula" />
+                app:layout_constraintBottom_toTopOf="@+id/iconTriangle"
+                app:layout_constraintStart_toStartOf="@id/guidelineTriangleImg"
+                app:layout_constraintTop_toBottomOf="@id/processTriangle" />
 
             <ImageView
-                android:id="@+id/imageTriangle"
+                android:id="@+id/iconTriangle"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 app:layout_constraintBottom_toBottomOf="@+id/triangleCalculatorContainer"
-                app:layout_constraintStart_toStartOf="@id/guideLineTriangleImage"
+                app:layout_constraintStart_toStartOf="@id/guidelineTriangleImg"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.75"
                 app:srcCompat="@drawable/triangleicon" />
 
             <TextView
-                android:id="@+id/titleTriangle"
+                android:id="@+id/triangleTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
                 android:text="Triangle"
                 android:textColor="#000000"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/imageTriangle"
-                app:layout_constraintStart_toStartOf="@+id/guideLineTriangleImage"
+                app:layout_constraintBottom_toTopOf="@+id/iconTriangle"
+                app:layout_constraintStart_toStartOf="@+id/guidelineTriangleImg"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.25" />
 
             <ImageView
-                android:id="@+id/imageTriangleFormula"
+                android:id="@+id/processTriangle"
                 android:layout_width="125dp"
                 android:layout_height="25dp"
-                app:layout_constraintBottom_toTopOf="@+id/imageTriangle"
-                app:layout_constraintStart_toStartOf="@id/guideLineTriangleImage"
-                app:layout_constraintTop_toBottomOf="@+id/titleTriangle"
+                app:layout_constraintBottom_toTopOf="@+id/iconTriangle"
+                app:layout_constraintStart_toStartOf="@id/guidelineTriangleImg"
+                app:layout_constraintTop_toBottomOf="@+id/triangleTitle"
                 app:layout_constraintVertical_bias="0.060000002"
                 app:srcCompat="@drawable/areatriangle" />
 
             <TextView
                 android:id="@+id/formulaTriangle"
                 android:layout_width="150dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:fontFamily="@font/futura_heavy"
                 android:text="Area =     x ? x ?"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaTriangle"
-                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintStart_toStartOf="@+id/guidelineTriangleProcess"
+                app:layout_constraintTop_toBottomOf="@+id/titleProcessTriangle"
                 app:layout_constraintVertical_bias="0.01999998" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/fractionOver2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/whitefraction"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.3"
-                app:layout_constraintStart_toStartOf="@+id/guideLineAreaTriangle"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                app:layout_constraintStart_toStartOf="@+id/guidelineTriangleProcess"
+                app:layout_constraintTop_toBottomOf="@+id/titleProcessTriangle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -413,7 +413,7 @@
             app:layout_constraintTop_toBottomOf="@id/triangleCalculatorContainer">
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/circlePanel"
                 android:layout_width="350dp"
                 android:layout_height="300dp"
                 android:src="@drawable/squarearea"
@@ -439,20 +439,20 @@
                 app:layout_constraintGuide_percent="0.51" />
 
             <TextView
-                android:id="@+id/titleCircle"
+                android:id="@+id/circleTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
                 android:text="Circle"
                 android:textColor="#000000"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@id/imageCircle"
+                app:layout_constraintBottom_toTopOf="@id/iconCircle"
                 app:layout_constraintStart_toStartOf="@+id/guidelineCircleImg"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.37" />
 
             <ImageView
-                android:id="@+id/imageCircle"
+                android:id="@+id/iconCircle"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 app:layout_constraintBottom_toBottomOf="@+id/circleCalculatorContainer"
@@ -469,9 +469,9 @@
                 android:text="Area = π x R²"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/imageCircle"
+                app:layout_constraintBottom_toTopOf="@+id/iconCircle"
                 app:layout_constraintStart_toStartOf="@+id/guidelineCircleImg"
-                app:layout_constraintTop_toBottomOf="@+id/titleCircle"
+                app:layout_constraintTop_toBottomOf="@+id/circleTitle"
                 app:layout_constraintVertical_bias="0.19999999" />
 
             <TextView
@@ -482,13 +482,13 @@
                 android:text="R = Radius"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/imageCircle"
+                app:layout_constraintBottom_toTopOf="@+id/iconCircle"
                 app:layout_constraintStart_toStartOf="@+id/guidelineCircleImg"
                 app:layout_constraintTop_toBottomOf="@+id/processCircle"
                 app:layout_constraintVertical_bias="0.19999999" />
 
             <TextView
-                android:id="@+id/processTitleCircle"
+                android:id="@+id/titleProcessCircle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
@@ -498,23 +498,23 @@
                 app:layout_constraintBottom_toBottomOf="@+id/circleCalculatorContainer"
                 app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
                 app:layout_constraintTop_toTopOf="@+id/circleCalculatorContainer"
-                app:layout_constraintVertical_bias="0.16000003" />
+                app:layout_constraintVertical_bias="0.12" />
 
             <TextView
-                android:id="@+id/processCircleWhite"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/formulaCircle"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
                 android:fontFamily="@font/futura_heavy"
                 android:text="Area = π x ?²"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
-                app:layout_constraintTop_toBottomOf="@+id/processTitleCircle"
+                app:layout_constraintTop_toBottomOf="@+id/titleProcessCircle"
                 app:layout_constraintVertical_bias="0.100000024" />
 
             <TextView
-                android:id="@+id/textRadius"
+                android:id="@+id/radiusTitleTriangle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
@@ -523,8 +523,8 @@
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="@id/circleCalculatorContainer"
                 app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
-                app:layout_constraintTop_toBottomOf="@+id/processCircleWhite"
-                app:layout_constraintVertical_bias="0.060000002" />
+                app:layout_constraintTop_toBottomOf="@+id/formulaCircle"
+                app:layout_constraintVertical_bias="0.01" />
 
             <EditText
                 android:id="@+id/editTextRadiusCircle"
@@ -541,11 +541,11 @@
                 android:textSize="12sp"
                 app:layout_constraintHeight_percent="0.10"
                 app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
-                app:layout_constraintTop_toBottomOf="@+id/textRadius" />
+                app:layout_constraintTop_toBottomOf="@+id/radiusTitleTriangle" />
 
 
             <TextView
-                android:id="@+id/titleResultCircle"
+                android:id="@+id/resultTitleCircle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
@@ -558,7 +558,7 @@
                 app:layout_constraintVertical_bias="0.100000024" />
 
             <EditText
-                android:id="@+id/resultCircleArea"
+                android:id="@+id/resultTextCircle"
                 android:layout_width="130dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
@@ -572,7 +572,7 @@
                 android:textSize="12sp"
                 app:layout_constraintHeight_percent="0.10"
                 app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
-                app:layout_constraintTop_toBottomOf="@+id/titleResultCircle" />
+                app:layout_constraintTop_toBottomOf="@+id/resultTitleCircle" />
 
 
 

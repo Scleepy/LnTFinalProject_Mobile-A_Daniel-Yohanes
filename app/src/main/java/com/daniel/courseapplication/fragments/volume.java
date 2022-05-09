@@ -39,8 +39,8 @@ public class volume extends Fragment {
         View view = inflater.inflate(R.layout.fragment_volume, container, false);
 
         editTextSideCube = view.findViewById(R.id.editTextSideSquare);
-        editTextResultCube = view.findViewById(R.id.resultCubeVolume);
-        textViewProcessCube = view.findViewById(R.id.processTextCube);
+        editTextResultCube = view.findViewById(R.id.resultTextCube);
+        textViewProcessCube = view.findViewById(R.id.formulaCube);
 
         editTextSideCube.addTextChangedListener(new TextWatcher() {
             @Override
@@ -56,7 +56,7 @@ public class volume extends Fragment {
 
                     Double result = cubeVolume(Double.parseDouble(side));
 
-                    editTextResultCube.setText(Double.toString(result));
+                    editTextResultCube.setText(String.format("%,.2f", result));
 
                     textViewProcessCube.setText("Volume = " + side + "³");
                 } else if (editTextSideCube.getText().toString().length() > 11){
@@ -94,7 +94,7 @@ public class volume extends Fragment {
 
                     Double result = squarePyramidVolume(Double.parseDouble(base), Double.parseDouble(height));
 
-                    editTextResultSquarePyramid.setText(Double.toString(result));
+                    editTextResultSquarePyramid.setText(String.format("%,.2f", result));
                     textViewProcessSquarePyramid.setText("Volume =     x " + base + " x " + height);
                 } else if (editTextBaseSquarePyramid.getText().toString().isEmpty() && editTextHeightSquarePyramid.getText().toString().isEmpty()) {
                     editTextResultSquarePyramid.setText("Input values");
@@ -142,7 +142,7 @@ public class volume extends Fragment {
 
                     Double result = squarePyramidVolume(Double.parseDouble(base), Double.parseDouble(height));
 
-                    editTextResultSquarePyramid.setText(Double.toString(result));
+                    editTextResultSquarePyramid.setText(String.format("%,.2f", result));
                     textViewProcessSquarePyramid.setText("Volume =     x " + base + " x " + height);
                 } else if (editTextBaseSquarePyramid.getText().toString().isEmpty() && editTextHeightSquarePyramid.getText().toString().isEmpty()) {
                     editTextResultSquarePyramid.setText("Input values");
@@ -197,7 +197,7 @@ public class volume extends Fragment {
 
                     Double result = rectangularPyramidVolume(Double.parseDouble(length), Double.parseDouble(width), Double.parseDouble(height));
 
-                    editTextResultRectangularPyramid.setText(Double.toString(result));
+                    editTextResultRectangularPyramid.setText(String.format("%,.2f", result));
                     textViewProcessRectangularPyramid.setText("Volume =     x " + length + " x " + width + " x " + height);
 
                 } else if (editTextLengthRectangularPyramid.getText().toString().isEmpty() && editTextWidthRectangularPyramid.getText().toString().isEmpty() && editTextHeightRectangularPyramid.getText().toString().isEmpty()){
@@ -315,7 +315,7 @@ public class volume extends Fragment {
 
                     Double result = rectangularPyramidVolume(Double.parseDouble(length), Double.parseDouble(width), Double.parseDouble(height));
 
-                    editTextResultRectangularPyramid.setText(Double.toString(result));
+                    editTextResultRectangularPyramid.setText(String.format("%,.2f", result));
                     textViewProcessRectangularPyramid.setText("Volume =     x " + length + " x " + width + " x " + height);
 
                 } else if (editTextLengthRectangularPyramid.getText().toString().isEmpty() && editTextWidthRectangularPyramid.getText().toString().isEmpty() && editTextHeightRectangularPyramid.getText().toString().isEmpty()){
@@ -433,7 +433,7 @@ public class volume extends Fragment {
 
                     Double result = rectangularPyramidVolume(Double.parseDouble(length), Double.parseDouble(width), Double.parseDouble(height));
 
-                    editTextResultRectangularPyramid.setText(Double.toString(result));
+                    editTextResultRectangularPyramid.setText(String.format("%,.2f", result));
                     textViewProcessRectangularPyramid.setText("Volume =     x " + length + " x " + width + " x " + height);
 
                 } else if (editTextLengthRectangularPyramid.getText().toString().isEmpty() && editTextWidthRectangularPyramid.getText().toString().isEmpty() && editTextHeightRectangularPyramid.getText().toString().isEmpty()){
@@ -557,7 +557,7 @@ public class volume extends Fragment {
 
                     Double result = cylinderVolume(Double.parseDouble(radius), Double.parseDouble(height));
 
-                    editTextResultCylinder.setText(Double.toString(result));
+                    editTextResultCylinder.setText(String.format("%,.2f", result));
                     textViewProcessCylinder.setText("Volume = π x " + radius + "² x " + height);
 
                 } else if (editTextRadiusCylinder.getText().toString().isEmpty() && editTextHeightCylinder.getText().toString().isEmpty()) {
@@ -605,7 +605,7 @@ public class volume extends Fragment {
 
                     Double result = cylinderVolume(Double.parseDouble(radius), Double.parseDouble(height));
 
-                    editTextResultCylinder.setText(Double.toString(result));
+                    editTextResultCylinder.setText(String.format("%,.2f", result));
                     textViewProcessCylinder.setText("Volume = π x " + radius + "² x " + height);
 
                 } else if (editTextRadiusCylinder.getText().toString().isEmpty() && editTextHeightCylinder.getText().toString().isEmpty()) {

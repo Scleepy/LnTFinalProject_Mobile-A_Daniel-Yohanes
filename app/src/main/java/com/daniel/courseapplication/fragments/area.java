@@ -18,8 +18,14 @@ import com.daniel.courseapplication.R;
 
 public class area extends Fragment {
 
-    EditText userfieldSquare, editTextBaseTriangle, editTextHeightTriangle, resultTextTriangle, resultSquare, editTextRadiusCircle, resultCircleArea;
-    TextView formulaTriangle, processTextSquare, processTextCircle;
+    EditText editTextLengthSquare, editTextResultSquare;
+    TextView textViewProcessSquare;
+
+    EditText editTextBaseTriangle, editTextHeightTriangle, editTextResultTriangle;
+    TextView textViewProcessTriangle;
+
+    EditText editTextRadiusCircle, editTextResultCircle;
+    TextView textViewProcessCircle;
 
     public area(){
 
@@ -31,21 +37,12 @@ public class area extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_area, container, false);
 
-        userfieldSquare = view.findViewById(R.id.editTextLengthSquare);
-        resultSquare = view.findViewById(R.id.resultTextSquare);
-        processTextSquare = view.findViewById(R.id.processTextSquare);
+        editTextLengthSquare = view.findViewById(R.id.editTextLengthSquare);
+        editTextResultSquare = view.findViewById(R.id.resultTextSquare);
 
-        editTextBaseTriangle = view.findViewById(R.id.editTextBaseTriangle);
-        editTextHeightTriangle = view.findViewById(R.id.editTextHeightTriangle);
-        resultTextTriangle = view.findViewById(R.id.resultTextTriangle);
-        formulaTriangle = view.findViewById(R.id.formulaTriangle);
+        textViewProcessSquare = view.findViewById(R.id.formulaSquare);
 
-        editTextRadiusCircle = view.findViewById(R.id.editTextRadiusCircle);
-        resultCircleArea = view.findViewById(R.id.resultCircleArea);
-        processTextCircle = view.findViewById(R.id.processCircleWhite);
-
-
-        userfieldSquare.addTextChangedListener(new TextWatcher() {
+        editTextLengthSquare.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -53,23 +50,19 @@ public class area extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(!editTextLengthSquare.getText().toString().isEmpty() && editTextLengthSquare.getText().toString().length() < 15){
 
-                if(!userfieldSquare.getText().toString().isEmpty() && userfieldSquare.getText().toString().length() <= 8){
-
-
-                    String length = userfieldSquare.getText().toString();
+                    String length = editTextLengthSquare.getText().toString();
 
                     Double result = squareArea(Double.parseDouble(length));
 
-                    resultSquare.setText(Double.toString(result));
-
-                    processTextSquare.setText(length + " x " + length);
-
-
-                } else if (userfieldSquare.getText().toString().isEmpty()) {
-                    resultSquare.setText("Input length");
-                } else {
-                    resultSquare.setText("Max 8 digits");
+                    editTextResultSquare.setText(String.format("%,.2f", result));
+                    textViewProcessSquare.setText("Area = " + length + " x " + length);
+                } else if (editTextLengthSquare.getText().toString().isEmpty()) {
+                    editTextResultSquare.setText("Input length");
+                    textViewProcessSquare.setText("Area = ? x ?"); //max 15
+                } else if (editTextLengthSquare.getText().toString().length() > 15){
+                    editTextResultSquare.setText("Max 15 digits");
                 }
             }
 
@@ -79,6 +72,12 @@ public class area extends Fragment {
             }
         });
 
+        editTextBaseTriangle = view.findViewById(R.id.editTextBaseTriangle);
+        editTextHeightTriangle = view.findViewById(R.id.editTextHeightTriangle);
+        editTextResultTriangle = view.findViewById(R.id.resultTextTriangle);
+
+        textViewProcessTriangle = view.findViewById(R.id.formulaTriangle);
+
         editTextBaseTriangle.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -87,34 +86,37 @@ public class area extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!editTextBaseTriangle.getText().toString().isEmpty() && !editTextHeightTriangle.getText().toString().isEmpty() && (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() <= 8)){
+                if(!editTextBaseTriangle.getText().toString().isEmpty() && !editTextHeightTriangle.getText().toString().isEmpty() && (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() <= 20)){
 
                     String base = editTextBaseTriangle.getText().toString();
-
                     String height = editTextHeightTriangle.getText().toString();
 
                     Double result = triangleArea(Double.parseDouble(base), Double.parseDouble(height));
 
-                    resultTextTriangle.setText(Double.toString(result));
+                    editTextResultTriangle.setText(String.format("%,.2f", result));
+                    textViewProcessTriangle.setText("Area =     x " + base + " x " + height);
 
-                    formulaTriangle.setText("Area =     x " + base + " x " + height);
-                } else if (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() >= 8) {
-                    resultTextTriangle.setText("Both max 8 digits");
                 } else if (editTextBaseTriangle.getText().toString().isEmpty() && editTextHeightTriangle.getText().toString().isEmpty()){
-                    resultTextTriangle.setText("Input values");
-                    formulaTriangle.setText("Area =     x ? x ?");
-                } else if (editTextBaseTriangle.getText().toString().isEmpty() && !editTextHeightTriangle.getText().toString().isEmpty()){
-                    resultTextTriangle.setText("Input base");
+                    editTextResultTriangle.setText("Input values");
+                    textViewProcessTriangle.setText("Area =     x ? x ?");
+
+                } else if (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() > 20){
+                    editTextResultTriangle.setText("Both max 20 digits");
+
+                } else if (editTextBaseTriangle.getText().toString().isEmpty()){
+                    editTextResultTriangle.setText("Input base");
 
                     String height = editTextHeightTriangle.getText().toString();
 
-                    formulaTriangle.setText("Area =     x ? x " + height);
-                } else if(!editTextBaseTriangle.getText().toString().isEmpty() && editTextHeightTriangle.getText().toString().isEmpty()){
-                    resultTextTriangle.setText("Input height");
+                    textViewProcessTriangle.setText("Area =     x ? x " + height);
 
-                    String base = editTextBaseTriangle.getText().toString();
+                } else if (editTextHeightTriangle.getText().toString().isEmpty()){
+                    editTextResultTriangle.setText("Input height");
 
-                    formulaTriangle.setText("Area =     x " + base + " x ?");
+                   String base = editTextBaseTriangle.getText().toString();
+
+                    textViewProcessTriangle.setText("Area =     x " + base + " x ?");
+
                 }
             }
 
@@ -132,34 +134,37 @@ public class area extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!editTextBaseTriangle.getText().toString().isEmpty() && !editTextHeightTriangle.getText().toString().isEmpty() && (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() <= 8)){
+                if(!editTextBaseTriangle.getText().toString().isEmpty() && !editTextHeightTriangle.getText().toString().isEmpty() && (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() <= 20)){
 
                     String base = editTextBaseTriangle.getText().toString();
-
                     String height = editTextHeightTriangle.getText().toString();
 
                     Double result = triangleArea(Double.parseDouble(base), Double.parseDouble(height));
 
-                    resultTextTriangle.setText(Double.toString(result));
+                    editTextResultTriangle.setText(String.format("%,.2f", result));
+                    textViewProcessTriangle.setText("Area =     x " + base + " x " + height);
 
-                    formulaTriangle.setText("Area =     x " + base + " x " + height);
-                } else if (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() >= 8) {
-                    resultTextTriangle.setText("Both max 8 digits");
                 } else if (editTextBaseTriangle.getText().toString().isEmpty() && editTextHeightTriangle.getText().toString().isEmpty()){
-                    resultTextTriangle.setText("Input values");
-                    formulaTriangle.setText("Area =     x ? x ?");
-                } else if (editTextBaseTriangle.getText().toString().isEmpty() && !editTextHeightTriangle.getText().toString().isEmpty()){
-                    resultTextTriangle.setText("Input base");
+                    editTextResultTriangle.setText("Input values");
+                    textViewProcessTriangle.setText("Area =     x ? x ?");
+
+                } else if (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() > 20){
+                    editTextResultTriangle.setText("Both max 20 digits");
+
+                } else if (editTextBaseTriangle.getText().toString().isEmpty()){
+                    editTextResultTriangle.setText("Input base");
 
                     String height = editTextHeightTriangle.getText().toString();
 
-                    formulaTriangle.setText("Area =     x ? x " + height);
-                } else if(!editTextBaseTriangle.getText().toString().isEmpty() && editTextHeightTriangle.getText().toString().isEmpty()){
-                    resultTextTriangle.setText("Input height");
+                    textViewProcessTriangle.setText("Area =     x ? x " + height);
+
+                } else if (editTextHeightTriangle.getText().toString().isEmpty()){
+                    editTextResultTriangle.setText("Input height");
 
                     String base = editTextBaseTriangle.getText().toString();
 
-                    formulaTriangle.setText("Area =     x " + base + " x ?");
+                    textViewProcessTriangle.setText("Area =     x " + base + " x ?");
+
                 }
             }
 
@@ -170,6 +175,12 @@ public class area extends Fragment {
         });
 
 
+
+        editTextRadiusCircle = view.findViewById(R.id.editTextRadiusCircle);
+        editTextResultCircle = view.findViewById(R.id.resultTextCircle);
+
+        textViewProcessCircle = view.findViewById(R.id.formulaCircle);
+
         editTextRadiusCircle.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -178,22 +189,21 @@ public class area extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!editTextRadiusCircle.getText().toString().isEmpty() && editTextRadiusCircle.getText().toString().length() <= 8){
-
+                if(!editTextRadiusCircle.getText().toString().isEmpty() && (editTextRadiusCircle.getText().toString().length() < 30)){
 
                     String radius = editTextRadiusCircle.getText().toString();
 
-                    Double result = squareArea(Double.parseDouble(radius));
+                    Double result = circleArea(Double.parseDouble(radius));
 
-                    resultCircleArea.setText(Double.toString(result));
-
-                    processTextCircle.setText("Area = π x " + radius + "²");
+                    editTextResultCircle.setText(String.format("%,.2f", result));
+                    textViewProcessCircle.setText("Area = π x " + radius + "²");
 
 
                 } else if (editTextRadiusCircle.getText().toString().isEmpty()) {
-                    resultCircleArea.setText("Input radius");
-                } else {
-                    resultCircleArea.setText("Max 8 digits");
+                    editTextResultCircle.setText("Input radius");
+                    textViewProcessCircle.setText("Area = π x ?²");
+                } else if (editTextRadiusCircle.getText().toString().length() > 30){
+                    editTextResultCircle.setText("Max 30 digits");
                 }
             }
 
