@@ -87,7 +87,7 @@ public class area extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!editTextBaseTriangle.getText().toString().isEmpty() && !editTextHeightTriangle.getText().toString().isEmpty() && editTextBaseTriangle.getText().toString().length() <= 8 && editTextHeightTriangle.getText().toString().length() <= 8 && (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() <= 8)){
+                if(!editTextBaseTriangle.getText().toString().isEmpty() && !editTextHeightTriangle.getText().toString().isEmpty() && (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() <= 8)){
 
                     String base = editTextBaseTriangle.getText().toString();
 
@@ -132,7 +132,7 @@ public class area extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!editTextBaseTriangle.getText().toString().isEmpty() && !editTextHeightTriangle.getText().toString().isEmpty() && editTextBaseTriangle.getText().toString().length() <= 8 && editTextHeightTriangle.getText().toString().length() <= 8 && (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() <= 8)){
+                if(!editTextBaseTriangle.getText().toString().isEmpty() && !editTextHeightTriangle.getText().toString().isEmpty() && (editTextBaseTriangle.getText().toString().length() + editTextHeightTriangle.getText().toString().length() <= 8)){
 
                     String base = editTextBaseTriangle.getText().toString();
 

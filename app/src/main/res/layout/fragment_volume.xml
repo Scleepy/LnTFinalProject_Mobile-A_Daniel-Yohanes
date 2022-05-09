@@ -1,14 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.volume">
+    tools:context=".fragments.volume"
+    android:fillViewport="true">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="FRAGMENT VOLUME" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTitleVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <TextView
+            android:id="@+id/titleVolumeCalculator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_extra_black"
+            android:text="Volume Calculator"
+            android:textColor="#2C272E"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTitleVolume"
+            app:layout_constraintWidth_percent="0.8" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cubeCalculatorContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleVolumeCalculator">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCubeImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.095" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCubeProcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51" />
+
+            <ImageView
+                android:id="@+id/cubePanel"
+                android:layout_width="350dp"
+                android:layout_height="300dp"
+                android:src="@drawable/squarearea"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iconCube"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cubePanel"
+                app:layout_constraintStart_toStartOf="@id/guidelineCubeImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.75"
+                app:srcCompat="@drawable/cubeicon" />
+
+            <TextView
+                android:id="@+id/cubeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Cube"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/iconCube"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCubeImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.36" />
+
+            <TextView
+                android:id="@+id/processCube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Area = S³"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/iconCube"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCubeImg"
+                app:layout_constraintTop_toBottomOf="@+id/cubeTitle"
+                app:layout_constraintVertical_bias="0.19999999" />
+
+            <TextView
+                android:id="@+id/attrCube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="S = Side"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/iconCube"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCubeImg"
+                app:layout_constraintTop_toBottomOf="@+id/processCube" />
+
+            <TextView
+                android:id="@+id/titleProcessCube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Process"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/cubeCalculatorContainer"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCubeProcess"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.16000003" />
+
+            <TextView
+                android:id="@+id/processTextCube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Area = ?³"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCubeProcess"
+                app:layout_constraintTop_toBottomOf="@+id/titleProcessCube"
+                app:layout_constraintVertical_bias="0.08" />
+
+            <TextView
+                android:id="@+id/sideTitleCube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Side: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCubeProcess"
+                app:layout_constraintTop_toBottomOf="@+id/processTextCube"
+                app:layout_constraintVertical_bias="0.060000002" />
+
+            <EditText
+                android:id="@+id/editTextLengthSquare"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfield"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Ex: 32"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#B1AFBB"
+                android:textSize="12sp"
+                app:layout_constraintHeight_percent="0.10"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCubeProcess"
+                app:layout_constraintTop_toBottomOf="@+id/sideTitleCube" />
+
+            <TextView
+                android:id="@+id/resultTitleCube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Result: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCubeProcess"
+                app:layout_constraintTop_toBottomOf="@+id/editTextLengthSquare"
+                app:layout_constraintVertical_bias="0.100000024" />
+
+            <EditText
+                android:id="@+id/resultCubeVolume"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfieldwhite"
+                android:clickable="false"
+                android:cursorVisible="true"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Input side"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                android:textSize="12sp"
+                app:layout_constraintHeight_percent="0.10"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCubeProcess"
+                app:layout_constraintTop_toBottomOf="@+id/resultTitleCube" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
