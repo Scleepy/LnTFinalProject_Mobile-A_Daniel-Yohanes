@@ -4,8 +4,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daniel.courseapplication.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class counter extends Fragment {
 
@@ -22,6 +29,9 @@ public class counter extends Fragment {
     Button btnAdd, btnMin, btnReset;
 
     SharedPreferences sPUser;
+
+    private DatabaseReference mDatabase;
+    private FirebaseAuth mAuth;
 
     public counter() {
 
@@ -67,6 +77,8 @@ public class counter extends Fragment {
                     counterTextName.setText(words[counterIndex]);
                 }
 
+                addExp();
+                updateCounter(counterIndex);
                 editor.putString("PROGRESSCOUNTER", Integer.toString(counterIndex));
                 editor.apply();
             }
@@ -80,6 +92,7 @@ public class counter extends Fragment {
                 if(counterIndex > 0){
                     counterIndex--;
                     counterText.setText(Integer.toString(counterIndex));
+                    addExp();
                 }
 
                 if(counterIndex > 100){
@@ -88,6 +101,7 @@ public class counter extends Fragment {
                     counterTextName.setText(words[counterIndex]);
                 }
 
+                updateCounter(counterIndex);
                 editor.putString("PROGRESSCOUNTER", Integer.toString(counterIndex));
                 editor.apply();
             }
@@ -96,15 +110,72 @@ public class counter extends Fragment {
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                counterText.setText("0");
-                counterTextName.setText("Zero");
 
-                editor.putString("PROGRESSCOUNTER", "0");
-                editor.apply();
+                if(counterText.getText() != "0") {
+                    counterText.setText("0");
+                    counterTextName.setText("Zero");
+
+                    addExp();
+                    updateCounter(0);
+                    editor.putString("PROGRESSCOUNTER", "0");
+                    editor.apply();
+                }
             }
         });
 
+        mAuth = FirebaseAuth.getInstance();
 
         return view;
     }
+
+    public void updateCounter(Integer counterIndex){
+
+        String UUID = mAuth.getCurrentUser().getUid();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(UUID);
+
+        mDatabase.child("progressCounter").setValue(counterIndex)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Log.d("TAG", "SAVED COUNTER DATA");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("TAG", "COUNTER DATA FAILED");
+                    }
+                });
+    }
+
+    public void addExp(){
+        String totalExp = sPUser.getString("TOTALEXP", "");
+
+        Integer expValue = 10;
+
+        Integer newValue = Integer.parseInt(totalExp) + expValue;
+
+        SharedPreferences.Editor editor = sPUser.edit();
+
+        editor.putString("TOTALEXP", Integer.toString(newValue));
+        editor.apply();
+
+        String UUID = mAuth.getCurrentUser().getUid();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(UUID);
+
+        mDatabase.child("totalExp").setValue(newValue)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Log.d("TAG", "SAVED EXP DATA");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("TAG", "EXP DATA FAILED");
+                    }
+                });
+    }
+
 }

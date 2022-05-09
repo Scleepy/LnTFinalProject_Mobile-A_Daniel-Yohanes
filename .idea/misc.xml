@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable-v24/userfieldwhite.xml" value="0.193" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/border_red.xml" value="0.193" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/counter.xml" value="0.2425" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/counterwhite.xml" value="0.2425" />
@@ -13,6 +14,8 @@
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/panel.xml" value="0.1985" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/progresspanel.xml" value="0.2425" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/shadowpanel.xml" value="0.1785" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/squarearea.xml" value="0.193" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/trianglearea.xml" value="0.193" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/user.xml" value="0.2155" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/userfield.xml" value="0.2" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/volume.xml" value="0.2155" />
@@ -26,7 +29,7 @@
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/appbar.xml" value="0.25" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/content_user_profile.xml" value="0.18177697189483227" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/dialog_loading.xml" value="0.264" />
-        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_area.xml" value="0.1955128205128205" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_area.xml" value="0.2" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_counter.xml" value="0.264" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_first.xml" value="0.18177697189483227" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_home_screen.xml" value="0.2" />

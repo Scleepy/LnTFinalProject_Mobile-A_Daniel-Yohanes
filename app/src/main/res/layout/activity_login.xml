@@ -83,7 +83,7 @@
             app:layout_constraintWidth_percent="0.7" />
 
         <EditText
-            android:id="@+id/editTextEmailAddress"
+            android:id="@+id/editTextLengthSquare"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="4dp"

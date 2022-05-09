@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -84,7 +83,7 @@ public class Login extends AppCompatActivity {
 
     public void attemptLogin(View view){
 
-        editTextEmailLogin = findViewById(R.id.editTextEmailAddress);
+        editTextEmailLogin = findViewById(R.id.editTextLengthSquare);
         editTextPasswordLogin = findViewById(R.id.editTextPassword);
 
         String email = editTextEmailLogin.getText().toString();
