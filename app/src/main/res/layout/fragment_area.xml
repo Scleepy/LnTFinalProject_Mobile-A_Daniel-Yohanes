@@ -257,7 +257,7 @@
                 android:clickable="false"
                 android:cursorVisible="true"
                 android:fontFamily="@font/futura_heavy"
-                android:hint="Input length"
+                android:hint="Input values"
                 android:inputType="number"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -294,7 +294,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideLineAreaTriangle"
                 app:layout_constraintTop_toBottomOf="@+id/formulaTriangle"
-                app:layout_constraintVertical_bias="0.100000024" />
+                app:layout_constraintVertical_bias="0.050000012" />
 
             <EditText
                 android:id="@+id/editTextHeightTriangle"
@@ -385,8 +385,8 @@
 
             <TextView
                 android:id="@+id/formulaTriangle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
                 android:fontFamily="@font/futura_heavy"
                 android:text="Area =     x ? x ?"
                 android:textColor="#FFFFFF"
@@ -470,7 +470,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
-                android:text="Area = π x R x R"
+                android:text="Area = π x R²"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/imageCircle"
@@ -509,7 +509,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
-                android:text="Area = π x ? x ?"
+                android:text="Area = π x ?²"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -570,7 +570,7 @@
                 android:clickable="false"
                 android:cursorVisible="true"
                 android:fontFamily="@font/futura_heavy"
-                android:hint="Input length"
+                android:hint="Input radius"
                 android:inputType="number"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
