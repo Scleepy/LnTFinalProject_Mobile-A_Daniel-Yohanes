@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.15" />
+            app:layout_constraintGuide_percent="0.105" />
 
         <TextView
             android:id="@+id/titleAreaCalculator"
@@ -35,11 +35,10 @@
             android:id="@+id/squareCalculatorContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titleAreaCalculator"
-            app:layout_constraintVertical_bias="0.10">
+            app:layout_constraintTop_toBottomOf="@+id/titleAreaCalculator">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideLineAreaImage"
@@ -63,8 +62,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -189,10 +187,10 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="3dp"
                 android:background="@drawable/userfieldwhite"
-                android:fontFamily="@font/futura_heavy"
-                android:hint="Input length"
                 android:clickable="false"
                 android:cursorVisible="true"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Input length"
                 android:inputType="number"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -208,11 +206,9 @@
             android:id="@+id/triangleCalculatorContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/squareCalculatorContainer"
-            app:layout_constraintVertical_bias="0.10">
+            app:layout_constraintTop_toBottomOf="@+id/squareCalculatorContainer">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideLineTriangleImage"
@@ -256,6 +252,7 @@
                 android:id="@+id/resultTextTriangle"
                 android:layout_width="130dp"
                 android:layout_height="40dp"
+                android:layout_marginTop="3dp"
                 android:background="@drawable/userfieldwhite"
                 android:clickable="false"
                 android:cursorVisible="true"
@@ -411,7 +408,197 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/circleCalculatorContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/triangleCalculatorContainer">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="350dp"
+                android:layout_height="300dp"
+                android:src="@drawable/squarearea"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCircleImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.095" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineCircleProcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.51" />
+
+            <TextView
+                android:id="@+id/titleCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Circle"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@id/imageCircle"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCircleImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.37" />
+
+            <ImageView
+                android:id="@+id/imageCircle"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="@+id/circleCalculatorContainer"
+                app:layout_constraintStart_toStartOf="@id/guidelineCircleImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.75"
+                app:srcCompat="@drawable/circleicon" />
+
+            <TextView
+                android:id="@+id/processCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Area = π x R x R"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/imageCircle"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCircleImg"
+                app:layout_constraintTop_toBottomOf="@+id/titleCircle"
+                app:layout_constraintVertical_bias="0.19999999" />
+
+            <TextView
+                android:id="@+id/attrCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="R = Radius"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/imageCircle"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCircleImg"
+                app:layout_constraintTop_toBottomOf="@+id/processCircle"
+                app:layout_constraintVertical_bias="0.19999999" />
+
+            <TextView
+                android:id="@+id/processTitleCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Process"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/circleCalculatorContainer"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
+                app:layout_constraintTop_toTopOf="@+id/circleCalculatorContainer"
+                app:layout_constraintVertical_bias="0.16000003" />
+
+            <TextView
+                android:id="@+id/processCircleWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Area = π x ? x ?"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
+                app:layout_constraintTop_toBottomOf="@+id/processTitleCircle"
+                app:layout_constraintVertical_bias="0.100000024" />
+
+            <TextView
+                android:id="@+id/textRadius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Radius: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/circleCalculatorContainer"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
+                app:layout_constraintTop_toBottomOf="@+id/processCircleWhite"
+                app:layout_constraintVertical_bias="0.060000002" />
+
+            <EditText
+                android:id="@+id/editTextRadiusCircle"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfield"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Ex: 32"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#B1AFBB"
+                android:textSize="12sp"
+                app:layout_constraintHeight_percent="0.10"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
+                app:layout_constraintTop_toBottomOf="@+id/textRadius" />
+
+
+            <TextView
+                android:id="@+id/titleResultCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="Result: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
+                app:layout_constraintTop_toBottomOf="@+id/editTextRadiusCircle"
+                app:layout_constraintVertical_bias="0.100000024" />
+
+            <EditText
+                android:id="@+id/resultCircleArea"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/userfieldwhite"
+                android:clickable="false"
+                android:cursorVisible="true"
+                android:fontFamily="@font/futura_heavy"
+                android:hint="Input length"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                android:textSize="12sp"
+                app:layout_constraintHeight_percent="0.10"
+                app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
+                app:layout_constraintTop_toBottomOf="@+id/titleResultCircle" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="345dp"
+            android:layout_height="100dp"
+            android:src="@drawable/navpanel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleCalculatorContainer"
+            />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </ScrollView>
