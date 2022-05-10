@@ -38,7 +38,7 @@ Sign Up                    |  Log In                   |  Counter               
 [Square Pyramid Volume](https://www.flaticon.com/premium-icon/pyramid_2106643)   
 [Rectangular Pyramid Volume](https://www.flaticon.com/free-icon/pyramid_6181247)   
 [Cylinder Volume](https://www.flaticon.com/free-icon/cylinder_227426)   
-[Cube Volume](https://www.flaticon.com/free-icon/cube_838579)   
+[Volume](https://www.flaticon.com/free-icon/cube_838579)   
 
 ### [Phoenix Group](https://www.flaticon.com/authors/phoenix-group):  
 [Area](https://www.flaticon.com/premium-icon/wide_2782996)  
