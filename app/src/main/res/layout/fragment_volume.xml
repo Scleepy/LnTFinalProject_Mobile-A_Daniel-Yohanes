@@ -359,7 +359,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/squarePyramidCalculatorContainer"
                 app:layout_constraintStart_toStartOf="@id/guidelineSquarePyramidImg"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.82"
+                app:layout_constraintVertical_bias="0.825"
                 app:srcCompat="@drawable/squarepyramidicon" />
 
             <TextView
@@ -379,6 +379,7 @@
                 android:id="@+id/processSquarePyramid"
                 android:layout_width="140dp"
                 android:layout_height="60dp"
+                android:contentDescription="@string/process_square_pyramid"
                 app:layout_constraintBottom_toTopOf="@+id/iconSquarePyramid"
                 app:layout_constraintStart_toStartOf="@id/guidelineSquarePyramidImg"
                 app:layout_constraintTop_toBottomOf="@+id/squarePyramidTitle"
@@ -403,6 +404,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/fractionsquarepyramid"
+                android:contentDescription="@string/fraction_over_3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.44"
                 app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidProcess"
@@ -439,6 +441,7 @@
                 android:layout_width="350dp"
                 android:layout_height="450dp"
                 android:src="@drawable/type3panel"
+                android:contentDescription="@string/volume_panel"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -448,10 +451,11 @@
                 android:id="@+id/iconRectangularPyramid"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:contentDescription="@string/icon_rectangular_pyramid"
                 app:layout_constraintBottom_toBottomOf="@+id/rectangularPyramidPanel"
                 app:layout_constraintStart_toStartOf="@id/guidelineRectangularPyramidImg"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.85"
+                app:layout_constraintVertical_bias="0.86"
                 app:srcCompat="@drawable/recpyramidicon" />
 
             <TextView

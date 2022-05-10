@@ -191,6 +191,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
+                android:layout_marginStart="5dp"
                 android:text="@string/danielyohanes03_gmail_com"
                 android:textColor="#2C272E"
                 android:textSize="15sp"
@@ -205,6 +206,7 @@
                 android:text="@string/placeholder_courseid"
                 android:textColor="#2C272E"
                 android:textSize="15sp"
+                android:layout_marginStart="5dp"
                 app:layout_constraintStart_toEndOf="@id/courseIDTextPlaceholder"
                 app:layout_constraintBottom_toBottomOf="parent" />
 

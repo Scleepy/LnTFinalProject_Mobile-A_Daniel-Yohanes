@@ -149,4 +149,6 @@
     <string name="substraction">Substraction</string>
     <string name="reset_counter">Reset Counter</string>
     <string name="rest_reminder_image">rest reminder image</string>
+    <string name="icon_rectangular_pyramid">icon rectangular pyramid</string>
+    <string name="process_square_pyramid">process square pyramid</string>
 </resources>
