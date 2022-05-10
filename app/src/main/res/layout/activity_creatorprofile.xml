@@ -202,7 +202,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
-                android:text="School animal, forest animal, foxes"
+                android:text="Vector: back to school animal, forest animals, foxes"
                 android:textColor="#F66969"
                 android:textSize="14sp"
                 android:layout_marginTop="5dp"
