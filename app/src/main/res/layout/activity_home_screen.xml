@@ -110,7 +110,7 @@
                     android:fontFamily="@font/futura_heavy"
                     android:layout_marginEnd="8dp"
                     android:text="@string/placeholder_navbar_name"
-                    android:textColor="#000000"
+                    android:textColor="@color/blackTheme"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/userIcon"
@@ -139,7 +139,7 @@
                     android:layout_marginEnd="8dp"
                     android:fontFamily="@font/futura_heavy"
                     android:text="@string/placeholder_courseid"
-                    android:textColor="#F55353"
+                    android:textColor="@color/redTheme"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toStartOf="@+id/userIcon"
                     app:layout_constraintTop_toBottomOf="@+id/usernameText">

@@ -1,6 +1,7 @@
 package com.daniel.courseapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -23,6 +24,9 @@ public class CreatorProfile extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= 27) {
             view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
         }
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
 
         setContentView(R.layout.activity_creatorprofile);
     }

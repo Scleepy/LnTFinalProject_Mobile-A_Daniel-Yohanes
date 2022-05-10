@@ -2,6 +2,7 @@ package com.daniel.courseapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -78,6 +79,8 @@ public class HomeScreen extends AppCompatActivity {
         userInfoSharedPreferences = getSharedPreferences("USERINFO", MODE_PRIVATE);
 
         setContentView(R.layout.activity_home_screen);
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         String name = userInfoSharedPreferences.getString("NAME", "");
         String courseID = userInfoSharedPreferences.getString("COURSEID", "");

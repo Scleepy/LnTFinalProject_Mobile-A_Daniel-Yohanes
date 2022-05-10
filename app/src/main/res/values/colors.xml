@@ -9,4 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellowTheme">#FFC300</color>
     <color name="redTheme">#F55353</color>
+    <color name="blackTheme">#2C272E</color>
+    <color name="darkGreyTheme">#B1AFBB</color>
+    <color name="whiteTheme">#FEF9EF</color>
+    <color name="lightGreyTheme">#979598</color>
+    <color name="orangeTheme">#F98343</color>
+    <color name="darkOrangeTheme">#AC3E12</color>
+    <color name="redOrangeTheme">#FF6845</color>
+
+
 </resources>

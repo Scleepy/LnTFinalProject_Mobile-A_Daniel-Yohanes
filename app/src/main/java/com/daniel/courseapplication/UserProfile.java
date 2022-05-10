@@ -1,6 +1,7 @@
 package com.daniel.courseapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -37,6 +38,8 @@ public class UserProfile extends AppCompatActivity {
         sPUser = this.getSharedPreferences("USERINFO", MODE_PRIVATE);
 
         setContentView(R.layout.activity_user_profile);
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         Utility utility = new Utility();
 
