@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
@@ -41,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     public static Activity mainActivity;
+
+    private DatabaseReference mDatabase;
+
+    Dialog loadDialog;
+
+    SharedPreferences sPUser;
 
 
     @Override
@@ -103,10 +110,65 @@ public class MainActivity extends AppCompatActivity {
 
         if(!email.equals("") && !password.equals("")){
 
-            Intent intent = new Intent(this, HomeScreen.class);
-            startActivity(intent);
-            finish();
+            syncData();
+
+
         }
+    }
+
+    public void syncData(){
+
+        loadDialog = new Dialog(this);
+        loadDialog.setContentView(R.layout.dialog_loading);
+        loadDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        loadDialog.setCancelable(false);
+
+        loadDialog.show();
+
+        String UUID = mAuth.getCurrentUser().getUid();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(UUID);
+
+        sPUser = getSharedPreferences("USERINFO", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sPUser.edit();
+
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(UUID);
+
+        mDatabase.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+
+                if(!task.isSuccessful()){
+                    Log.e("TAG", "ERROR RETRIEVING DATE");
+                } else {
+
+                    String dateTracker = String.valueOf(task.getResult().child("dateTracker").getValue());
+                    String progressCounter = String.valueOf(task.getResult().child("progressCounter").getValue());
+                    String progressToday = String.valueOf(task.getResult().child("progressToday").getValue());
+                    String progressTotal = String.valueOf(task.getResult().child("progressTotal").getValue());
+
+                    editor.putString("PROGRESSCOUNTER", progressCounter);
+                    editor.putString("PROGRESSTODAY", progressToday);
+                    editor.putString("PROGRESSTOTAL", progressTotal);
+                    editor.putString("DATETRACKER", dateTracker);
+                    editor.apply();
+
+                    Log.d("TAG", "SYNCINGDATA");
+                }
+
+                loadDialog.cancel();
+
+                Intent intent = new Intent(MainActivity.mainActivity.getApplicationContext(), HomeScreen.class);
+                startActivity(intent);
+                finish();
+
+
+
+            }
+
+        });
+
+        Log.d("TAG", "DATA RETRIEVED");
+
     }
 
 

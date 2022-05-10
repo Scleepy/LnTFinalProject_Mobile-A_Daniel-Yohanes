@@ -146,6 +146,7 @@ public class Login extends AppCompatActivity {
                                         String progressTotal = String.valueOf(task.getResult().child("progressTotal").getValue());
                                         String totalExp = String.valueOf(task.getResult().child("totalExp").getValue());
                                         String date = String.valueOf(task.getResult().child("date").getValue());
+                                        String dateTracker = String.valueOf(task.getResult().child("dateTracker").getValue());
 
                                         editorUser.putString("NAME", name);
                                         editorUser.putString("COURSEID", courseID);
@@ -155,12 +156,14 @@ public class Login extends AppCompatActivity {
                                         editorUser.putString("PROGRESSTOTAL", progressTotal);
                                         editorUser.putString("TOTALEXP", totalExp);
                                         editorUser.putString("DATE", date);
+                                        editorUser.putString("DATETRACKER", dateTracker);
                                         editorUser.apply();
 
                                     }
                                     Toast.makeText(view.getContext(), "Login successful!", Toast.LENGTH_SHORT).show();
 
                                     MainActivity.mainActivity.finish();
+                                    loadDialog.cancel();
 
                                     Intent intent = new Intent(view.getContext(), HomeScreen.class);
                                     startActivity(intent);

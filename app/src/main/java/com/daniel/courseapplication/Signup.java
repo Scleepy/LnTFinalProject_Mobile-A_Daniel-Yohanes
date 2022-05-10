@@ -147,6 +147,7 @@ public class Signup extends AppCompatActivity {
                             mDatabase.child("Users").child(UUID).setValue(newUser);
 
                             Toast.makeText(view.getContext(), "Account registered!", Toast.LENGTH_SHORT).show();
+                            loadDialog.cancel();
 
                             Intent intent = new Intent(view.getContext(), Login.class);
                             startActivity(intent);

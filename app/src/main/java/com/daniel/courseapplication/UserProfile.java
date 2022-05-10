@@ -62,7 +62,12 @@ public class UserProfile extends AppCompatActivity {
         countingTextview = findViewById(R.id.countingProgressContent);
         totalExpTextView = findViewById(R.id.expProgressContent);
 
-        nameTextView.setText(name);
+        if(name.length() > 15){
+            nameTextView.setText(shortName);
+        } else {
+            nameTextView.setText(name);
+        }
+
         dateTextView.setText("Joined " + date);
         emailTextView.setText(email);
         courseIDTextView.setText(courseID);

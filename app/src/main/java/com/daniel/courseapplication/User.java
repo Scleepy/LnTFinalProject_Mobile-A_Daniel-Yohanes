@@ -9,6 +9,7 @@ public class User {
     private String password;
     private String courseID;
     private String date;
+    private String dateTracker;
     private Integer progressToday;
     private Integer progressTotal;
     private Integer progressCounter;
@@ -38,7 +39,15 @@ public class User {
         StringBuilder newDate = new StringBuilder(date.toString() + " " + month + " " + year.toString());
 
         this.date = newDate.toString();
+        this.dateTracker = newDate.toString();
+    }
 
+    public String getDateTracker() {
+        return dateTracker;
+    }
+
+    public void setDateTracker(String dateTracker) {
+        this.dateTracker = dateTracker;
     }
 
     public String getDate() {

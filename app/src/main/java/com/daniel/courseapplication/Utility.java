@@ -1,5 +1,7 @@
 package com.daniel.courseapplication;
 
+import java.util.Calendar;
+
 public class Utility {
 
     public static boolean isNumeric(String number){
@@ -86,4 +88,20 @@ public class Utility {
         return newName.toString();
 
     }
+
+    public String generateDate(){
+        String[] monthNames = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+
+        Calendar calender = Calendar.getInstance();
+
+        Integer year = calender.get(Calendar.YEAR);
+        Integer date = calender.get(Calendar.DATE);
+
+        String month = monthNames[calender.get(Calendar.MONTH)];
+
+        StringBuilder newDate = new StringBuilder(date.toString() + " " + month + " " + year.toString());
+
+        return newDate.toString();
+    }
+
 }

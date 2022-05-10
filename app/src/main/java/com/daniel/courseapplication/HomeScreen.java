@@ -10,10 +10,13 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -22,9 +25,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daniel.courseapplication.fragments.FragmentAdapter;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class HomeScreen extends AppCompatActivity {
 
@@ -42,6 +53,10 @@ public class HomeScreen extends AppCompatActivity {
     TextView usernameTextView, courseIDTextView;
 
     public static Activity homeScreenActivity;
+    private Handler handler = new Handler();
+
+    private DatabaseReference mDatabase;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,12 +137,181 @@ public class HomeScreen extends AppCompatActivity {
         setTitle("");
         appbar.setOutlineProvider(null);
 
+        mAuth = FirebaseAuth.getInstance();
+
+
+        String dateTracker = userInfoSharedPreferences.getString("DATETRACKER", "");
+
+        Utility utility = new Utility();
+
+        String dateToday = utility.generateDate();
+
+        if(!dateTracker.equals(dateToday)){
+            resetTimeToday();
+            Log.d("TAG", "TIME TODAY RESET");
+        }
+
+        Log.d("TAG", "ONCREATE");
+
     }
 
     public void openProfile(View view){
         Intent intent = new Intent(view.getContext(), UserProfile.class);
         startActivity(intent);
     }
+
+    public void resetTimeToday(){
+
+        userInfoSharedPreferences = getSharedPreferences("USERINFO", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = userInfoSharedPreferences.edit();
+
+        String UUID = mAuth.getCurrentUser().getUid();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(UUID);
+
+        mDatabase.child("progressToday").setValue(0)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Log.d("TAG", "SAVED COUNTER DATA");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("TAG", "COUNTER DATA FAILED");
+                    }
+                });
+
+        Utility utility = new Utility();
+
+        String dateToday = utility.generateDate();
+
+        mDatabase.child("dateTracker").setValue(dateToday)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Log.d("TAG", "SAVED COUNTER DATA");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("TAG", "COUNTER DATA FAILED");
+                    }
+                });
+
+        editor.putString("PROGRESSTODAY", "0");
+        editor.putString("DATETRACKER", dateToday);
+        editor.apply();
+
+    }
+
+    public void updateTime(){
+
+        userInfoSharedPreferences = getSharedPreferences("USERINFO", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = userInfoSharedPreferences.edit();
+
+        String timeToday = userInfoSharedPreferences.getString("PROGRESSTODAY", "");
+        String timeTotal = userInfoSharedPreferences.getString("PROGRESSTOTAL", "");
+
+        Integer timeTodayInt = Integer.parseInt(timeToday);
+        Integer timeTotalInt = Integer.parseInt(timeTotal);
+
+        timeTodayInt++;
+        timeTotalInt++;
+
+        editor.putString("PROGRESSTODAY", Integer.toString(timeTodayInt));
+        editor.putString("PROGRESSTOTAL", Integer.toString(timeTotalInt));
+        editor.apply();
+
+        String UUID = mAuth.getCurrentUser().getUid();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(UUID);
+
+        mDatabase.child("progressToday").setValue(timeTodayInt)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Log.d("TAG", "SAVED PROGRESS TODAY DATA");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("TAG", "COUNTER DATA FAILED");
+                    }
+                });
+
+        mDatabase.child("progressTotal").setValue(timeTotalInt)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Log.d("TAG", "SAVED TOTAL PROGRESS DATA");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("TAG", "COUNTER DATA FAILED");
+                    }
+                });
+    }
+
+    public void startTimer(){
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                runnable.run();
+            }
+        }, 60000);
+
+
+    }
+
+    public void stopTimer(){
+        handler.removeCallbacks(runnable);
+    }
+
+    private final Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            updateTime();
+            handler.postDelayed(runnable, 60000);
+        }
+    };
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        Log.d("TAG", "STARTED");
+
+        startTimer();
+
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+
+        Log.d("TAG", "STOPPED");
+
+        stopTimer();
+
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+
+        Log.d("TAG", "DESTROYED");
+
+        stopTimer();
+
+    }
+
+
+
 
 
 }
