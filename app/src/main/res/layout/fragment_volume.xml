@@ -342,12 +342,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
+                android:lineSpacingExtra="10sp"
                 android:text="@string/attr_squarepyramid"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/iconSquarePyramid"
                 app:layout_constraintStart_toStartOf="@id/guidelineSquarePyramidImg"
-                app:layout_constraintTop_toBottomOf="@id/processSquarePyramid" />
+                app:layout_constraintTop_toBottomOf="@id/processSquarePyramid"
+                app:layout_constraintVertical_bias="0.39" />
 
             <ImageView
                 android:id="@+id/iconSquarePyramid"
@@ -357,7 +359,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/squarePyramidCalculatorContainer"
                 app:layout_constraintStart_toStartOf="@id/guidelineSquarePyramidImg"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.75"
+                app:layout_constraintVertical_bias="0.82"
                 app:srcCompat="@drawable/squarepyramidicon" />
 
             <TextView
@@ -388,7 +390,7 @@
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:fontFamily="@font/futura_heavy"
-                android:text="@string/volume_square_pyramid_process"
+                android:text="Volume =     x ? x ?"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -492,6 +494,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
+                android:lineSpacingExtra="14sp"
                 android:text="@string/attr_rectangular_pyramid"
                 android:textColor="#000000"
                 android:textSize="14sp"
@@ -517,7 +520,7 @@
                 android:layout_width="150dp"
                 android:layout_height="55dp"
                 android:fontFamily="@font/futura_heavy"
-                android:text="@string/volume_rectangular_pyramid_process"
+                android:text="Volume =     x ? x ? x ?"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -797,6 +800,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
+                android:lineSpacingExtra="12sp"
                 android:text="@string/attr_cylinder"
                 android:textColor="#000000"
                 android:textSize="14sp"

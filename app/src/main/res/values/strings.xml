@@ -106,11 +106,9 @@
     <string name="attr_squarepyramid">B = Base\nH = Height</string>
     <string name="icon_square_pyramid">icon square pyramid</string>
     <string name="square_npyramid_text">Square\nPyramid</string>
-    <string name="volume_square_pyramid_process">Volume = x ? x ?</string>
     <string name="rectangular_text">Rectangular</string>
     <string name="pyramid_text">Pyramid</string>
-    <string name="attr_rectangular_pyramid">L = Length\n W = Width\nH = Height</string>
-    <string name="volume_rectangular_pyramid_process">Volume = x ? x ? x ?</string>
+    <string name="attr_rectangular_pyramid">L = Length\nW = Width\nH = Height</string>
     <string name="fraction_over_3">fraction over 3</string>
     <string name="length_text">Length:</string>
     <string name="width_text">Width:</string>
@@ -132,7 +130,6 @@
     <string name="attr_triangle">B = Base\nH = Height</string>
     <string name="icon_triangle">icon triangle</string>
     <string name="triangle_text">Triangle</string>
-    <string name="area_triangle_process">Area = x ? x ?</string>
     <string name="fraction_over_2_white">fraction over 2 white</string>
     <string name="circle_text">Circle</string>
     <string name="area_circle_formula">Area = π x R²</string>

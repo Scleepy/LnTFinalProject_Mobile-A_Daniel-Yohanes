@@ -51,7 +51,7 @@ public class volume extends Fragment {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                if(!editTextSideCube.getText().toString().isEmpty() && editTextSideCube.getText().toString().length() <= 11){
+                if(!editTextSideCube.getText().toString().isEmpty() && editTextSideCube.getText().toString().length() <= 10){
                     String side = editTextSideCube.getText().toString();
 
                     Double result = cubeVolume(Double.parseDouble(side));
@@ -59,8 +59,8 @@ public class volume extends Fragment {
                     editTextResultCube.setText(String.format("%,.2f", result));
 
                     textViewProcessCube.setText("Volume = " + side + "³");
-                } else if (editTextSideCube.getText().toString().length() > 11){
-                    editTextResultCube.setText("Max 11 digits");
+                } else if (editTextSideCube.getText().toString().length() > 10){
+                    editTextResultCube.setText("Max 10 digits");
                 } else if (editTextSideCube.getText().toString().isEmpty()){
                     textViewProcessCube.setText("Area = ?³");
                     editTextResultCube.setText("Input side");
@@ -190,7 +190,7 @@ public class volume extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!editTextLengthRectangularPyramid.getText().toString().isEmpty() && !editTextWidthRectangularPyramid.getText().toString().isEmpty() && !editTextHeightRectangularPyramid.getText().toString().isEmpty() && (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() <= 34)){
+                if(!editTextLengthRectangularPyramid.getText().toString().isEmpty() && !editTextWidthRectangularPyramid.getText().toString().isEmpty() && !editTextHeightRectangularPyramid.getText().toString().isEmpty() && (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() <= 20)){
                     String length = editTextLengthRectangularPyramid.getText().toString();
                     String width = editTextWidthRectangularPyramid.getText().toString();
                     String height = editTextHeightRectangularPyramid.getText().toString();
@@ -204,8 +204,8 @@ public class volume extends Fragment {
                     editTextResultRectangularPyramid.setText("Input values");
                     textViewProcessRectangularPyramid.setText("Volume =     x ? x ? x ?");
 
-                } else if (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() > 34) {
-                    editTextResultRectangularPyramid.setText("All max 34 digits");
+                } else if (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() > 20) {
+                    editTextResultRectangularPyramid.setText("All max 20 digits");
 
                 } else if (editTextLengthRectangularPyramid.getText().toString().isEmpty()){
                     editTextResultRectangularPyramid.setText("Input length");
@@ -308,7 +308,7 @@ public class volume extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!editTextLengthRectangularPyramid.getText().toString().isEmpty() && !editTextWidthRectangularPyramid.getText().toString().isEmpty() && !editTextHeightRectangularPyramid.getText().toString().isEmpty() && (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() <= 34)){
+                if(!editTextLengthRectangularPyramid.getText().toString().isEmpty() && !editTextWidthRectangularPyramid.getText().toString().isEmpty() && !editTextHeightRectangularPyramid.getText().toString().isEmpty() && (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() <= 20)){
                     String length = editTextLengthRectangularPyramid.getText().toString();
                     String width = editTextWidthRectangularPyramid.getText().toString();
                     String height = editTextHeightRectangularPyramid.getText().toString();
@@ -322,8 +322,8 @@ public class volume extends Fragment {
                     editTextResultRectangularPyramid.setText("Input values");
                     textViewProcessRectangularPyramid.setText("Volume =     x ? x ? x ?");
 
-                } else if (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() > 34) {
-                    editTextResultRectangularPyramid.setText("All max 34 digits");
+                } else if (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() > 20) {
+                    editTextResultRectangularPyramid.setText("All max 20 digits");
 
                 } else if (editTextLengthRectangularPyramid.getText().toString().isEmpty()){
                     editTextResultRectangularPyramid.setText("Input length");
@@ -426,7 +426,7 @@ public class volume extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(!editTextLengthRectangularPyramid.getText().toString().isEmpty() && !editTextWidthRectangularPyramid.getText().toString().isEmpty() && !editTextHeightRectangularPyramid.getText().toString().isEmpty() && (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() <= 34)){
+                if(!editTextLengthRectangularPyramid.getText().toString().isEmpty() && !editTextWidthRectangularPyramid.getText().toString().isEmpty() && !editTextHeightRectangularPyramid.getText().toString().isEmpty() && (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() <= 20)){
                     String length = editTextLengthRectangularPyramid.getText().toString();
                     String width = editTextWidthRectangularPyramid.getText().toString();
                     String height = editTextHeightRectangularPyramid.getText().toString();
@@ -440,8 +440,8 @@ public class volume extends Fragment {
                     editTextResultRectangularPyramid.setText("Input values");
                     textViewProcessRectangularPyramid.setText("Volume =     x ? x ? x ?");
 
-                } else if (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() > 34) {
-                    editTextResultRectangularPyramid.setText("All max 34 digits");
+                } else if (editTextLengthRectangularPyramid.getText().toString().length() + editTextWidthRectangularPyramid.getText().toString().length() + editTextHeightRectangularPyramid.getText().toString().length() > 20) {
+                    editTextResultRectangularPyramid.setText("All max 20 digits");
 
                 } else if (editTextLengthRectangularPyramid.getText().toString().isEmpty()){
                     editTextResultRectangularPyramid.setText("Input length");
