@@ -410,7 +410,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/triangleCalculatorContainer">
+            app:layout_constraintTop_toBottomOf="@id/triangleCalculatorContainer"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineAreaEnd">
 
             <ImageView
                 android:id="@+id/circlePanel"
@@ -574,23 +575,14 @@
                 app:layout_constraintStart_toStartOf="@+id/guidelineCircleProcess"
                 app:layout_constraintTop_toBottomOf="@+id/resultTitleCircle" />
 
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="345dp"
-            android:layout_height="100dp"
-            android:src="@drawable/navpanel"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/circleCalculatorContainer"
-            />
-
-
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineAreaEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

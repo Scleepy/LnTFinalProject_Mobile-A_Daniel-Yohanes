@@ -7,9 +7,7 @@
     android:background="#FFC300"
     android:stateListAnimator="@null"
     app:layout_constraintWidth_percent="0.6"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="-40dp">
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineWelcome"
@@ -72,7 +70,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelinePanel"
-        app:layout_constraintVertical_bias="0.487"
         app:srcCompat="@drawable/panel" />
 
     <Button
@@ -121,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/futura_heavy"
         android:text="Having trouble? Let us help!"
         android:textColor="#979598"

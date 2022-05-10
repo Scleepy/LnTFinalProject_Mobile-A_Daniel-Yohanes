@@ -654,6 +654,7 @@
             android:id="@+id/cylinderCalculatorContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineVolumeEnd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rectangularPyramidCalculatorContainer">
@@ -846,22 +847,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/titleProcessCylinder"
                 app:layout_constraintVertical_bias="0.01999998" />
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/panelExtraVolume"
-            android:layout_width="345dp"
-            android:layout_height="100dp"
-            android:src="@drawable/navpanel"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cylinderCalculatorContainer"
-            />
-
-
-
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVolumeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.945" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

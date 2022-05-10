@@ -15,4 +15,6 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="creatorString">Bina Nusantara University\nComputer Science\nEmail: danielyohanes03@gmail.com\nStudent ID: 2501975261/BN124315402</string>
+    <string name="stringLoginHelp"><![CDATA[Choose this screen to continue your progress, given you remember your login information: email & password. You may ask your guardian for support if you\'re having issues logging into your account.]]></string>
+    <string name="stringSignupHelp">Choose this screen if you are new to this platform. You may ask your guardian to guide you through the registration process. You are required to input your tuition id, email, name, and password.</string>
 </resources>

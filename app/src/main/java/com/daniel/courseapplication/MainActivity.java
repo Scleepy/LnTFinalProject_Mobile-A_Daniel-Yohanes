@@ -112,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
 
             syncData();
 
-
         }
     }
 
@@ -139,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(!task.isSuccessful()){
                     Log.e("TAG", "ERROR RETRIEVING DATE");
+
                 } else {
 
                     String dateTracker = String.valueOf(task.getResult().child("dateTracker").getValue());
@@ -160,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.mainActivity.getApplicationContext(), HomeScreen.class);
                 startActivity(intent);
                 finish();
-
 
 
             }

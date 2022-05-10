@@ -7,7 +7,6 @@
     android:background="#FFC300"
     tools:context=".Signup">
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineTop"
         android:layout_width="wrap_content"
