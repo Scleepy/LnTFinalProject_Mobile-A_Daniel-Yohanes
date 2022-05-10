@@ -41,7 +41,7 @@
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/drawable/whitepanel.xml" value="0.2425" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_creatorprofile.xml" value="0.264" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
-        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_main_screen.xml" value="0.19410004275331338" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/activity_signup.xml" value="0.264" />
@@ -50,13 +50,13 @@
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/content_user_profile.xml" value="0.18177697189483227" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/creatorprofile.xml" value="0.264" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/dialog_loading.xml" value="0.264" />
-        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_area.xml" value="0.3836431226765799" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_area.xml" value="0.351937984496124" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_counter.xml" value="0.264" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_first.xml" value="0.18177697189483227" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_home_screen.xml" value="0.2" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_second.xml" value="0.18177697189483227" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_user_profile.xml" value="0.2" />
-        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_volume.xml" value="0.264" />
+        <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/fragment_volume.xml" value="0.2" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/layout/help.xml" value="0.264" />
         <entry key="..\:/Users/Daniel/AndroidStudioProjects/CourseApplication/app/src/main/res/menu/bottommenu.xml" value="0.16545532278751604" />
       </map>

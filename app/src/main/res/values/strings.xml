@@ -17,4 +17,139 @@
     <string name="creatorString">Bina Nusantara University\nComputer Science\nEmail: danielyohanes03@gmail.com\nStudent ID: 2501975261/BN124315402</string>
     <string name="stringLoginHelp"><![CDATA[Choose this screen to continue your progress, given you remember your login information: email & password. You may ask your guardian for support if you\'re having issues logging into your account.]]></string>
     <string name="stringSignupHelp">Choose this screen if you are new to this platform. You may ask your guardian to guide you through the registration process. You are required to input your tuition id, email, name, and password.</string>
+    <string name="creator_profile">Creator Profile</string>
+    <string name="daniel_yohanes">Daniel Yohanes</string>
+    <string name="jakarta_indonesia">Jakarta, Indonesia</string>
+    <string name="information">Information</string>
+    <string name="asset_credit">Asset Credit</string>
+    <string name="pikisuperstar">pikisuperstar:</string>
+    <string name="info_piki">Vector: back to school animal, forest animals, foxes</string>
+    <string name="freepik">Freepik:</string>
+    <string name="info_freepik">Icon: counter, volume, pinpoint, triangle, rectangular pyramid, square pyramid, cylinder</string>
+    <string name="phoenix_group">Phoenix Group:</string>
+    <string name="icon_area">Icon: area</string>
+    <string name="ilham_fitrotul_hayat">Ilham Fitrotul Hayat:</string>
+    <string name="infoIlham">Icon: clock</string>
+    <string name="smashicons">Smashicons:</string>
+    <string name="info_smashicons">Icon: square</string>
+    <string name="m_karruly">M Karruly:</string>
+    <string name="info_mkarruly">Icon: circle</string>
+    <string name="lafs">Lafs:</string>
+    <string name="info_lafs">Icon: cube</string>
+    <string name="pinpoint_icon_description">pinpoint icon</string>
+    <string name="creator_icon_description">creator icon description</string>
+    <string name="placeholder_navbar_name">Daniel</string>
+    <string name="appbar_icon">appbar icon</string>
+    <string name="placeholder_courseid">CR-574943</string>
+    <string name="icon_more_description">icon more description</string>
+    <string name="image_fox_login">image fox login</string>
+    <string name="log_in_text">Log In</string>
+    <string name="email">Email</string>
+    <string name="name_mail_com">name@mail.com</string>
+    <string name="password">Password</string>
+    <string name="min_5_characters">Min. 5 Characters</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="no_account_create_account">No account? Create account</string>
+    <string name="welcome_scholar">Welcome\nScholar!</string>
+    <string name="image_panel_login">image panel login</string>
+    <string name="image_animal_landing">image animal landing</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="having_trouble_let_us_help">Having trouble? Let us help!</string>
+    <string name="course_id">Course ID</string>
+    <string name="course_id_edit_hint">CR-XXXXXX</string>
+    <string name="name_text">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="have_an_account_login">Have an account? Login</string>
+    <string name="profile_text">Profile</string>
+    <string name="user_icon">user icon</string>
+    <string name="placeholder_join">Joined 1 May 2022</string>
+    <string name="email_extra">Email:</string>
+    <string name="course_id_extra">Course ID:</string>
+    <string name="danielyohanes03_gmail_com">danielyohanes03@gmail.com</string>
+    <string name="course_card_text">Course Card</string>
+    <string name="daniel_y">Daniel Y</string>
+    <string name="progress_text">Progress</string>
+    <string name="time_today_filled_placeholder">43 Minute(s)</string>
+    <string name="time_today_text">Time Today</string>
+    <string name="progress_panel">progress panel</string>
+    <string name="total_time_placeholder">120 Minute(s)</string>
+    <string name="total_time_text">Total Time</string>
+    <string name="counting_placeholder">12345</string>
+    <string name="counting_text">Counting</string>
+    <string name="exp_placeholder">7934</string>
+    <string name="exp_text">EXP</string>
+    <string name="log_out">Log Out</string>
+    <string name="clock_icon">clock icon</string>
+    <string name="dialog_panel">dialog panel</string>
+    <string name="loading_data">Loading Data...</string>
+    <string name="help_panel">help panel</string>
+    <string name="help_text">Help</string>
+    <string name="counter_caps">COUNTER</string>
+    <string name="area_caps">AREA</string>
+    <string name="volume_caps">VOLUME</string>
+    <string name="volume_calculator">Volume Calculator</string>
+    <string name="cube_icon">cube icon</string>
+    <string name="cube_text">Cube</string>
+    <string name="cube_formula">Volume = S³</string>
+    <string name="attr_cube">S = Side</string>
+    <string name="process_text">Process</string>
+    <string name="cube_volume_process">Volume = ?³</string>
+    <string name="side_text">Side:</string>
+    <string name="hint_32">Ex: 32</string>
+    <string name="input_side_text">Input side</string>
+    <string name="result_text">Result:</string>
+    <string name="volume_panel">volume panel</string>
+    <string name="input_values_text">Input values</string>
+    <string name="hint_22">Ex: 22</string>
+    <string name="base_text">Base:</string>
+    <string name="height_text">Height:</string>
+    <string name="attr_squarepyramid">B = Base\nH = Height</string>
+    <string name="icon_square_pyramid">icon square pyramid</string>
+    <string name="square_npyramid_text">Square\nPyramid</string>
+    <string name="volume_square_pyramid_process">Volume = x ? x ?</string>
+    <string name="rectangular_text">Rectangular</string>
+    <string name="pyramid_text">Pyramid</string>
+    <string name="attr_rectangular_pyramid">L = Length\n W = Width\nH = Height</string>
+    <string name="volume_rectangular_pyramid_process">Volume = x ? x ? x ?</string>
+    <string name="fraction_over_3">fraction over 3</string>
+    <string name="length_text">Length:</string>
+    <string name="width_text">Width:</string>
+    <string name="hint_64">Ex: 64</string>
+    <string name="hint_34">Ex: 34</string>
+    <string name="radius_text">Radius:</string>
+    <string name="attr_cylinder">R = Radius\nH = Height</string>
+    <string name="icon_cylinder">icon cylinder</string>
+    <string name="cylinder_text">Cylinder</string>
+    <string name="volume_cylinder_formula">Volume\nπ x R² x H</string>
+    <string name="volume_cylinder_process">Volume = π x ?² x ?</string>
+    <string name="process_rectangular_pyramid_formula">process rectangular pyramid formula</string>
+    <string name="area_calculator_text">Area Calculator</string>
+    <string name="area_panel">Area panel</string>
+    <string name="square_text">Square</string>
+    <string name="area_square_formula">Area = S x S</string>
+    <string name="area_square_process">Area = ? x ?</string>
+    <string name="attr_square">S = Side</string>
+    <string name="attr_triangle">B = Base\nH = Height</string>
+    <string name="icon_triangle">icon triangle</string>
+    <string name="triangle_text">Triangle</string>
+    <string name="area_triangle_process">Area = x ? x ?</string>
+    <string name="fraction_over_2_white">fraction over 2 white</string>
+    <string name="circle_text">Circle</string>
+    <string name="area_circle_formula">Area = π x R²</string>
+    <string name="attr_circle">R = Radius</string>
+    <string name="area_circle_process">Area = π x ?²</string>
+    <string name="input_radius">Input radius</string>
+    <string name="icon_circle">icon circle</string>
+    <string name="process_triangle_content">process triangle content</string>
+    <string name="icon_square">icon square</string>
+    <string name="let_s_count">Let\'s Count!</string>
+    <string name="panel_counter">panel counter</string>
+    <string name="number_text">number text</string>
+    <string name="number_text_placeholder">Keep it going!</string>
+    <string name="number_placeholder">10</string>
+    <string name="operations">Operations</string>
+    <string name="addition">Addition</string>
+    <string name="substraction">Substraction</string>
+    <string name="reset_counter">Reset Counter</string>
+    <string name="rest_reminder_image">rest reminder image</string>
 </resources>

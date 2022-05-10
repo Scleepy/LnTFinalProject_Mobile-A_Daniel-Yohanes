@@ -4,14 +4,14 @@
     <item
         android:id="@+id/counterfragment"
         android:icon="@drawable/counter"
-        android:title="COUNTER" />
+        android:title="@string/counter_caps" />
     <item
         android:id="@+id/areafragment"
         android:icon="@drawable/area"
-        android:title="AREA" />
+        android:title="@string/area_caps" />
     <item
         android:id="@+id/volumefragment"
         android:icon="@drawable/volume"
-        android:title="VOLUME" />
+        android:title="@string/volume_caps" />
 
 </menu>

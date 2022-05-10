@@ -96,8 +96,8 @@ public class Login extends AppCompatActivity {
             return;
         }
 
-        if(!utility.validPassword(password)){
-            Toast.makeText(view.getContext(), "Password has to be more than 5 characters", Toast.LENGTH_SHORT).show();
+        if(password.isEmpty()){
+            Toast.makeText(view.getContext(), "Password cannot be empty", Toast.LENGTH_SHORT).show();
             return;
         }
 
