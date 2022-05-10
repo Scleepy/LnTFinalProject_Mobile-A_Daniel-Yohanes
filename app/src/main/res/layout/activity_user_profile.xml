@@ -1,563 +1,579 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserProfile">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTextProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.08" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineProfileSection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.16" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTextInformation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.28" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTextCourseCard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+    tools:context=".UserProfile"
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTextProfile"
-        app:layout_constraintWidth_percent="0.7">
-
-        <ImageView
-            android:id="@+id/backButtonProfile"
-            android:layout_width="31dp"
-            android:layout_height="24dp"
-            android:onClick="backButtonProfile"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            app:srcCompat="@drawable/backbutton" />
-
-        <TextView
-            android:id="@+id/titleProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_extra_black"
-            android:text="@string/profile_text"
-            android:layout_marginStart="10dp"
-            android:textColor="#2C272E"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/backButtonProfile"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintWidth_percent="0.7" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineProfileSection"
-        app:layout_constraintVertical_bias="0.004"
-        app:layout_constraintWidth_percent="0.7">
-
-        <ImageView
-            android:id="@+id/userIconProfileActivity"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_user"
-            android:contentDescription="@string/user_icon" />
-
-        <TextView
-            android:id="@+id/nameTextProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/futura_heavy"
-            android:text="@string/daniel_yohanes"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/userIconProfileActivity"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_marginStart="10dp"
-            android:contentDescription="@string/clock_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/userIconProfileActivity"
-            app:layout_constraintTop_toBottomOf="@+id/nameTextProfile"
-            app:layout_constraintVertical_bias="0.333"
-            app:srcCompat="@drawable/clock" />
-
-        <TextView
-            android:id="@+id/joinedDateText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:fontFamily="@font/futura_heavy"
-            android:text="@string/placeholder_join"
-            android:textColor="#ACACAE"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/nameTextProfile"
-            app:layout_constraintVertical_bias="0.32999998" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <TextView
-        android:id="@+id/titleInformation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/futura_extra_black"
-        android:text="@string/information"
-        android:textColor="#2C272E"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTextInformation"
-        app:layout_constraintWidth_percent="0.7" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleInformation"
-        app:layout_constraintVertical_bias="0.02"
-        app:layout_constraintWidth_percent="0.7">
-
-        <TextView
-            android:id="@+id/emailTextProfilePlaceholder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_heavy"
-            android:text="@string/email_extra"
-            android:textColor="#2C272E"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/courseIDTextPlaceholder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_heavy"
-            android:text="@string/course_id_extra"
-            android:textColor="#2C272E"
-            android:textSize="15sp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/emailTextProfilePlaceholder"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-
-        <TextView
-            android:id="@+id/emailTextProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_heavy"
-            android:text="@string/danielyohanes03_gmail_com"
-            android:textColor="#2C272E"
-            android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@id/emailTextProfilePlaceholder"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/courseIDTextProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_heavy"
-            android:text="@string/placeholder_courseid"
-            android:textColor="#2C272E"
-            android:textSize="15sp"
-            app:layout_constraintStart_toEndOf="@id/courseIDTextPlaceholder"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/titleCourseCard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/futura_extra_black"
-        android:text="@string/course_card_text"
-        android:textColor="#2C272E"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTextCourseCard"
-        app:layout_constraintWidth_percent="0.7" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleCourseCard"
-        app:layout_constraintVertical_bias="0.02"
-        app:layout_constraintWidth_percent="0.8">
-
-        <ImageView
-            android:id="@+id/courseCard"
-            android:layout_width="wrap_content"
-            android:layout_height="175dp"
-            android:contentDescription="@string/course_card_text"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/coursecard" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineTextCourseCardName"
+            android:id="@+id/guidelineTextProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.30" />
+            app:layout_constraintGuide_percent="0.09" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineProfileSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTextInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTextCourseCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextProfile"
+            app:layout_constraintWidth_percent="0.7">
+
+            <ImageView
+                android:id="@+id/backButtonProfile"
+                android:layout_width="31dp"
+                android:layout_height="24dp"
+                android:onClick="backButtonProfile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:srcCompat="@drawable/backbutton" />
+
+            <TextView
+                android:id="@+id/titleProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_extra_black"
+                android:text="@string/profile_text"
+                android:layout_marginStart="10dp"
+                android:textColor="#2C272E"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/backButtonProfile"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_percent="0.7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineProfileSection"
+            app:layout_constraintVertical_bias="0.004"
+            app:layout_constraintWidth_percent="0.7">
+
+            <ImageView
+                android:id="@+id/userIconProfileActivity"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_user"
+                android:contentDescription="@string/user_icon" />
+
+            <TextView
+                android:id="@+id/nameTextProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/futura_heavy"
+                android:text="@string/daniel_yohanes"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/userIconProfileActivity"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/clock_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/userIconProfileActivity"
+                app:layout_constraintTop_toBottomOf="@+id/nameTextProfile"
+                app:layout_constraintVertical_bias="0.333"
+                app:srcCompat="@drawable/clock" />
+
+            <TextView
+                android:id="@+id/joinedDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/futura_heavy"
+                android:text="@string/placeholder_join"
+                android:textColor="#ACACAE"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/nameTextProfile"
+                app:layout_constraintVertical_bias="0.32999998" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <TextView
-            android:id="@+id/userNameCourseCard"
+            android:id="@+id/titleInformation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_extra_black"
-            android:text="@string/daniel_y"
-            android:textColor="#F98343"
+            android:text="@string/information"
+            android:textColor="#2C272E"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guidelineTextCourseCardName"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextInformation"
             app:layout_constraintWidth_percent="0.7" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleInformation"
+            app:layout_constraintVertical_bias="0.02"
+            app:layout_constraintWidth_percent="0.7">
+
+            <TextView
+                android:id="@+id/emailTextProfilePlaceholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="@string/email_extra"
+                android:textColor="#2C272E"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/courseIDTextPlaceholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="@string/course_id_extra"
+                android:textColor="#2C272E"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/emailTextProfilePlaceholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/emailTextProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="@string/danielyohanes03_gmail_com"
+                android:textColor="#2C272E"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/emailTextProfilePlaceholder"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/courseIDTextProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_heavy"
+                android:text="@string/placeholder_courseid"
+                android:textColor="#2C272E"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/courseIDTextPlaceholder"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
-            android:id="@+id/CourseIDTitleCourseCard"
+            android:id="@+id/titleCourseCard"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_extra_black"
-            android:text="@string/course_id"
-            android:textColor="#AC3E12"
-            android:textSize="16sp"
+            android:text="@string/course_card_text"
+            android:textColor="#2C272E"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/userNameCourseCard"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextCourseCard"
             app:layout_constraintWidth_percent="0.7" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleCourseCard"
+            app:layout_constraintVertical_bias="0.02"
+            app:layout_constraintWidth_percent="0.8">
+
+            <ImageView
+                android:id="@+id/courseCard"
+                android:layout_width="wrap_content"
+                android:layout_height="175dp"
+                android:contentDescription="@string/course_card_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/coursecard" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineTextCourseCardName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.30" />
+
+            <TextView
+                android:id="@+id/userNameCourseCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_extra_black"
+                android:text="@string/daniel_y"
+                android:textColor="#F98343"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guidelineTextCourseCardName"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/CourseIDTitleCourseCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_extra_black"
+                android:text="@string/course_id"
+                android:textColor="#AC3E12"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userNameCourseCard"
+                app:layout_constraintWidth_percent="0.7" />
+
+            <TextView
+                android:id="@+id/courseIDCourseCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_extra_black"
+                android:text="@string/placeholder_courseid"
+                android:textColor="#FF6845"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CourseIDTitleCourseCard"
+                app:layout_constraintWidth_percent="0.7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTextProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
         <TextView
-            android:id="@+id/courseIDCourseCard"
+            android:id="@+id/titleProgress"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_extra_black"
-            android:text="@string/placeholder_courseid"
-            android:textColor="#FF6845"
-            android:textSize="14sp"
+            android:text="@string/progress_text"
+            android:textColor="#2C272E"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CourseIDTitleCourseCard"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTextProgress"
             app:layout_constraintWidth_percent="0.7" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleProgress"
+            app:layout_constraintVertical_bias="0.02">
+
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:columnCount="2"
+                app:rowCount="2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideLineText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.175" />
+
+                    <ImageView
+                        android:id="@+id/timeToday"
+                        android:layout_width="135dp"
+                        android:layout_height="55dp"
+                        app:layout_column="0"
+                        android:contentDescription="@string/progress_panel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_row="0"
+                        app:srcCompat="@drawable/progresspanel" />
+
+                    <TextView
+                        android:id="@+id/timeTodayContent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_heavy"
+                        android:text="@string/time_today_filled_placeholder"
+                        android:textAlignment="center"
+                        android:textColor="#2C272E"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideLineText1"
+                        app:layout_constraintWidth_percent="0.8" />
+
+                    <TextView
+                        android:id="@+id/timeTodayText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_heavy"
+                        android:text="@string/time_today_text"
+                        android:textAlignment="center"
+                        android:textColor="#ACACAE"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/timeTodayContent"
+                        app:layout_constraintWidth_percent="0.8" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideLineText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.175" />
+
+                    <ImageView
+                        android:id="@+id/timeTotal"
+                        android:layout_width="135dp"
+                        android:layout_height="55dp"
+                        app:layout_column="1"
+                        android:contentDescription="@string/progress_panel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_row="0"
+                        app:srcCompat="@drawable/progresspanel" />
+
+                    <TextView
+                        android:id="@+id/timeTotalContent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_heavy"
+                        android:text="@string/total_time_placeholder"
+                        android:textAlignment="center"
+                        android:textColor="#2C272E"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideLineText2"
+                        app:layout_constraintWidth_percent="0.8" />
+
+                    <TextView
+                        android:id="@+id/timeTotalText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_heavy"
+                        android:text="@string/total_time_text"
+                        android:textAlignment="center"
+                        android:textColor="#ACACAE"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/timeTotalContent"
+                        app:layout_constraintWidth_percent="0.8" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideLineText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.175" />
+
+                    <ImageView
+                        android:id="@+id/countingProgress"
+                        android:layout_width="135dp"
+                        android:layout_height="55dp"
+                        app:layout_column="0"
+                        android:contentDescription="@string/progress_panel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_row="1"
+                        app:srcCompat="@drawable/progresspanel" />
+
+                    <TextView
+                        android:id="@+id/countingProgressContent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_heavy"
+                        android:text="@string/counting_placeholder"
+                        android:textAlignment="center"
+                        android:textColor="#2C272E"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideLineText3"
+                        app:layout_constraintWidth_percent="0.8" />
+
+                    <TextView
+                        android:id="@+id/countingProgressTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_heavy"
+                        android:text="@string/counting_text"
+                        android:textAlignment="center"
+                        android:textColor="#ACACAE"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/countingProgressContent"
+                        app:layout_constraintWidth_percent="0.8" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideLineText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.175" />
+
+                    <ImageView
+                        android:id="@+id/expProgress"
+                        android:layout_width="135dp"
+                        android:layout_height="55dp"
+                        app:layout_column="1"
+                        android:contentDescription="@string/progress_panel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_row="1"
+                        app:srcCompat="@drawable/progresspanel" />
+
+                    <TextView
+                        android:id="@+id/expProgressContent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_heavy"
+                        android:text="@string/exp_placeholder"
+                        android:textAlignment="center"
+                        android:textColor="#2C272E"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/guideLineText4"
+                        app:layout_constraintWidth_percent="0.8" />
+
+                    <TextView
+                        android:id="@+id/expProgressTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/futura_heavy"
+                        android:text="@string/exp_text"
+                        android:textAlignment="center"
+                        android:textColor="#ACACAE"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/expProgressContent"
+                        app:layout_constraintWidth_percent="0.8" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#F55353"
+            android:fontFamily="@font/futura_heavy"
+            android:letterSpacing="0.05"
+            android:onClick="attemptLogout"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:stateListAnimator="@null"
+            android:text="@string/log_out"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineProfileEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintWidth_percent="0.7" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineProfileEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.93" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTextProgress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.66" />
-
-    <TextView
-        android:id="@+id/titleProgress"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/futura_extra_black"
-        android:text="@string/progress_text"
-        android:textColor="#2C272E"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTextProgress"
-        app:layout_constraintWidth_percent="0.7" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleProgress"
-        app:layout_constraintVertical_bias="0.02">
-
-
-        <androidx.gridlayout.widget.GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:columnCount="2"
-            app:rowCount="2">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp">
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideLineText1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.175" />
-
-                <ImageView
-                    android:id="@+id/timeToday"
-                    android:layout_width="135dp"
-                    android:layout_height="55dp"
-                    app:layout_column="0"
-                    android:contentDescription="@string/progress_panel"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_row="0"
-                    app:srcCompat="@drawable/progresspanel" />
-
-                <TextView
-                    android:id="@+id/timeTodayContent"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/futura_heavy"
-                    android:text="@string/time_today_filled_placeholder"
-                    android:textAlignment="center"
-                    android:textColor="#2C272E"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/guideLineText1"
-                    app:layout_constraintWidth_percent="0.8" />
-
-                <TextView
-                    android:id="@+id/timeTodayText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/futura_heavy"
-                    android:text="@string/time_today_text"
-                    android:textAlignment="center"
-                    android:textColor="#ACACAE"
-                    android:textSize="13sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/timeTodayContent"
-                    app:layout_constraintWidth_percent="0.8" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideLineText2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.175" />
-
-                <ImageView
-                    android:id="@+id/timeTotal"
-                    android:layout_width="135dp"
-                    android:layout_height="55dp"
-                    app:layout_column="1"
-                    android:contentDescription="@string/progress_panel"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_row="0"
-                    app:srcCompat="@drawable/progresspanel" />
-
-                <TextView
-                    android:id="@+id/timeTotalContent"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/futura_heavy"
-                    android:text="@string/total_time_placeholder"
-                    android:textAlignment="center"
-                    android:textColor="#2C272E"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/guideLineText2"
-                    app:layout_constraintWidth_percent="0.8" />
-
-                <TextView
-                    android:id="@+id/timeTotalText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/futura_heavy"
-                    android:text="@string/total_time_text"
-                    android:textAlignment="center"
-                    android:textColor="#ACACAE"
-                    android:textSize="13sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/timeTotalContent"
-                    app:layout_constraintWidth_percent="0.8" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideLineText3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.175" />
-
-                <ImageView
-                    android:id="@+id/countingProgress"
-                    android:layout_width="135dp"
-                    android:layout_height="55dp"
-                    app:layout_column="0"
-                    android:contentDescription="@string/progress_panel"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_row="1"
-                    app:srcCompat="@drawable/progresspanel" />
-
-                <TextView
-                    android:id="@+id/countingProgressContent"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/futura_heavy"
-                    android:text="@string/counting_placeholder"
-                    android:textAlignment="center"
-                    android:textColor="#2C272E"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/guideLineText3"
-                    app:layout_constraintWidth_percent="0.8" />
-
-                <TextView
-                    android:id="@+id/countingProgressTitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/futura_heavy"
-                    android:text="@string/counting_text"
-                    android:textAlignment="center"
-                    android:textColor="#ACACAE"
-                    android:textSize="13sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/countingProgressContent"
-                    app:layout_constraintWidth_percent="0.8" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideLineText4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.175" />
-
-                <ImageView
-                    android:id="@+id/expProgress"
-                    android:layout_width="135dp"
-                    android:layout_height="55dp"
-                    app:layout_column="1"
-                    android:contentDescription="@string/progress_panel"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_row="1"
-                    app:srcCompat="@drawable/progresspanel" />
-
-                <TextView
-                    android:id="@+id/expProgressContent"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/futura_heavy"
-                    android:text="@string/exp_placeholder"
-                    android:textAlignment="center"
-                    android:textColor="#2C272E"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/guideLineText4"
-                    app:layout_constraintWidth_percent="0.8" />
-
-                <TextView
-                    android:id="@+id/expProgressTitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/futura_heavy"
-                    android:text="@string/exp_text"
-                    android:textAlignment="center"
-                    android:textColor="#ACACAE"
-                    android:textSize="13sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/expProgressContent"
-                    app:layout_constraintWidth_percent="0.8" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.gridlayout.widget.GridLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="#F55353"
-        android:fontFamily="@font/futura_heavy"
-        android:letterSpacing="0.05"
-        android:onClick="attemptLogout"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:stateListAnimator="@null"
-        android:text="@string/log_out"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintWidth_percent="0.7" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

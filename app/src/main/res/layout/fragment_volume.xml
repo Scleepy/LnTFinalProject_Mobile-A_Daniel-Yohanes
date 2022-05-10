@@ -373,7 +373,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/iconSquarePyramid"
                 app:layout_constraintStart_toStartOf="@+id/guidelineSquarePyramidImg"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.25" />
+                app:layout_constraintVertical_bias="0.20" />
 
             <ImageView
                 android:id="@+id/processSquarePyramid"
@@ -513,7 +513,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/rectangularPyramidCalculatorContainer"
                 app:layout_constraintStart_toStartOf="@+id/guidelineRectangularPyramidProcess"
                 app:layout_constraintTop_toTopOf="@+id/rectangularPyramidCalculatorContainer"
-                app:layout_constraintVertical_bias="0.11" />
+                app:layout_constraintVertical_bias="0.09" />
 
             <TextView
                 android:id="@+id/formulaRectangularPyramid"
@@ -816,7 +816,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/cylinderCalculatorContainer"
                 app:layout_constraintStart_toStartOf="@id/guidelineCylinderImg"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.75"
+                app:layout_constraintVertical_bias="0.825"
                 app:srcCompat="@drawable/cylindericon" />
 
             <TextView
@@ -830,7 +830,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/iconCylinder"
                 app:layout_constraintStart_toStartOf="@+id/guidelineCylinderImg"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.25" />
+                app:layout_constraintVertical_bias="0.22" />
 
 
             <TextView

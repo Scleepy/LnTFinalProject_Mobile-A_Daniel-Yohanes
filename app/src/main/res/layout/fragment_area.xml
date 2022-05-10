@@ -73,7 +73,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/squarePanel"
                 app:layout_constraintStart_toStartOf="@id/guidelineSquareImg"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.75"
+                app:layout_constraintVertical_bias="0.78"
                 app:srcCompat="@drawable/areaicon" />
 
             <TextView
@@ -359,7 +359,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/triangleCalculatorContainer"
                 app:layout_constraintStart_toStartOf="@id/guidelineTriangleImg"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.75"
+                app:layout_constraintVertical_bias="0.83"
                 app:srcCompat="@drawable/triangleicon" />
 
             <TextView
@@ -377,14 +377,14 @@
 
             <ImageView
                 android:id="@+id/processTriangle"
-                android:layout_width="125dp"
-                android:layout_height="25dp"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
                 android:contentDescription="@string/process_triangle_content"
                 app:layout_constraintBottom_toTopOf="@+id/iconTriangle"
                 app:layout_constraintStart_toStartOf="@id/guidelineTriangleImg"
                 app:layout_constraintTop_toBottomOf="@+id/triangleTitle"
                 app:layout_constraintVertical_bias="0.16000003"
-                app:srcCompat="@drawable/areatriangle" />
+                app:srcCompat="@drawable/formulatrianglenew" />
 
             <TextView
                 android:id="@+id/formulaTriangle"
@@ -469,7 +469,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/circleCalculatorContainer"
                 app:layout_constraintStart_toStartOf="@id/guidelineCircleImg"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.75"
+                app:layout_constraintVertical_bias="0.81"
                 app:srcCompat="@drawable/circleicon" />
 
             <TextView
