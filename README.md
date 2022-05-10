@@ -34,14 +34,14 @@ Sign Up                    |  Log In                   |  Counter               
 
 ### [Freepik](https://www.flaticon.com/authors/freepik):  
 [Plus Minus Square](https://www.flaticon.com/free-icon/plus-and-minus-square_74061)  
-[Triangle](https://www.flaticon.com/premium-icon/triangle_227428)   
+[Triangle Area](https://www.flaticon.com/premium-icon/triangle_227428)   
 [Square Pyramid Volume](https://www.flaticon.com/premium-icon/pyramid_2106643)   
 [Rectangular Pyramid Volume](https://www.flaticon.com/free-icon/pyramid_6181247)   
 [Cylinder Volume](https://www.flaticon.com/free-icon/cylinder_227426)   
 [Volume](https://www.flaticon.com/free-icon/cube_838579)   
 
 ### [Phoenix Group](https://www.flaticon.com/authors/phoenix-group):  
-[Area](https://www.flaticon.com/premium-icon/wide_2782996)  
+[Area Icon](https://www.flaticon.com/premium-icon/wide_2782996)  
 
 ### [Smashicons](https://www.flaticon.com/authors/smashicons):  
 [Square Area](https://www.flaticon.com/premium-icon/area_3250990)  
