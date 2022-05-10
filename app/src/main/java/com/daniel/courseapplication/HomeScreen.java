@@ -132,6 +132,8 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
+
+
         appbar = findViewById(R.id.appbar);
         setSupportActionBar(appbar);
         setTitle("");
@@ -157,6 +159,11 @@ public class HomeScreen extends AppCompatActivity {
 
     public void openProfile(View view){
         Intent intent = new Intent(view.getContext(), UserProfile.class);
+        startActivity(intent);
+    }
+
+    public void openCreator(View view){
+        Intent intent = new Intent(view.getContext(), CreatorProfile.class);
         startActivity(intent);
     }
 
