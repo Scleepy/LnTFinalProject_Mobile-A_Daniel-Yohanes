@@ -151,9 +151,9 @@ public class counter extends Fragment {
     public void addExp(){
         String totalExp = sPUser.getString("TOTALEXP", "");
 
-        Integer expValue = 10;
+        int expValue = 10;
 
-        Integer newValue = Integer.parseInt(totalExp) + expValue;
+        int newValue = Integer.parseInt(totalExp) + expValue;
 
         SharedPreferences.Editor editor = sPUser.edit();
 
