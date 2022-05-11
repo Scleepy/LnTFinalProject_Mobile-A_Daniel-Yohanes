@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/futura_heavy"
                 android:text="@string/area_square_formula"
-                android:textColor="@color/white"
+                android:textColor="@color/blackTheme"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/iconSquare"
                 app:layout_constraintStart_toStartOf="@+id/guidelineSquareImg"
