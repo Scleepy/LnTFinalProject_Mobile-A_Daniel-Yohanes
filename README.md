@@ -18,7 +18,7 @@ Sign Up                    |  Log In                   |  Counter               
 
 |  Creator & Asset Credit  |
 |:-------------------------:
-<img src=https://user-images.githubusercontent.com/55547834/167707364-bdde5fe9-6189-4123-a81a-abf2b7d6ac98.gif width="216" height="480"/> | 
+<img src=https://user-images.githubusercontent.com/55547834/167776787-376266fe-55cd-45b5-8727-06f70cfd5a4d.gif width="216" height="480"/> | 
 
 ## Asset Credits
 
