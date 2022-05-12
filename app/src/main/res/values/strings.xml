@@ -124,8 +124,8 @@
     <string name="area_calculator_text">Area Calculator</string>
     <string name="area_panel">Area panel</string>
     <string name="square_text">Square</string>
-    <string name="area_square_formula">Area = S x S</string>
-    <string name="area_square_process">Area = ? x ?</string>
+    <string name="area_square_formula">Area = S²</string>
+    <string name="area_square_process">Area = ?²</string>
     <string name="attr_square">S = Side</string>
     <string name="attr_triangle">B = Base\nH = Height</string>
     <string name="icon_triangle">icon triangle</string>

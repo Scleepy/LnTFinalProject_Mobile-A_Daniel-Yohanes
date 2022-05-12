@@ -34,19 +34,19 @@ public class area extends Fragment {
 
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            if(!editTextLengthSquare.getText().toString().isEmpty() && editTextLengthSquare.getText().toString().length() < 15){
+            if(!editTextLengthSquare.getText().toString().isEmpty() && editTextLengthSquare.getText().toString().length() <= 20){
 
                 String length = editTextLengthSquare.getText().toString();
 
                 Double result = squareArea(Double.parseDouble(length));
 
                 editTextResultSquare.setText(String.format("%,.2f", result));
-                textViewProcessSquare.setText("Area = " + length + " x " + length);
+                textViewProcessSquare.setText("Area = " + length + "²");
             } else if (editTextLengthSquare.getText().toString().isEmpty()) {
                 editTextResultSquare.setText("Input length");
-                textViewProcessSquare.setText("Area = ? x ?"); //max 15
-            } else if (editTextLengthSquare.getText().toString().length() > 15){
-                editTextResultSquare.setText("Max 15 digits");
+                textViewProcessSquare.setText("Area = ?²"); //max 15
+            } else if (editTextLengthSquare.getText().toString().length() > 20){
+                editTextResultSquare.setText("Max 20 digits");
             }
         }
 
@@ -104,7 +104,7 @@ public class area extends Fragment {
 
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            if(!editTextRadiusCircle.getText().toString().isEmpty() && (editTextRadiusCircle.getText().toString().length() < 30)){
+            if(!editTextRadiusCircle.getText().toString().isEmpty() && (editTextRadiusCircle.getText().toString().length() <= 30)){
 
                 String radius = editTextRadiusCircle.getText().toString();
 

@@ -41,7 +41,7 @@ public class volume extends Fragment {
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-            if(!editTextSideCube.getText().toString().isEmpty() && editTextSideCube.getText().toString().length() <= 10){
+            if(!editTextSideCube.getText().toString().isEmpty() && editTextSideCube.getText().toString().length() <= 20){
                 String side = editTextSideCube.getText().toString();
 
                 Double result = cubeVolume(Double.parseDouble(side));
@@ -49,8 +49,8 @@ public class volume extends Fragment {
                 editTextResultCube.setText(String.format("%,.2f", result));
 
                 textViewProcessCube.setText("Volume = " + side + "³");
-            } else if (editTextSideCube.getText().toString().length() > 10){
-                editTextResultCube.setText("Max 10 digits");
+            } else if (editTextSideCube.getText().toString().length() > 20){
+                editTextResultCube.setText("Max 20 digits");
             } else if (editTextSideCube.getText().toString().isEmpty()){
                 textViewProcessCube.setText("Area = ?³");
                 editTextResultCube.setText("Input side");
