@@ -57,7 +57,11 @@ public class counter extends Fragment {
 
         counterText.setText(progressCounter);
 
-        counterTextName.setText(words[Integer.parseInt(counterText.getText().toString())]);
+        if(Integer.parseInt(progressCounter) > 100){
+            counterTextName.setText("Keep it going!");
+        } else {
+            counterTextName.setText(words[Integer.parseInt(counterText.getText().toString())]);
+        }
 
         btnAdd = view.findViewById(R.id.btnAddition);
         btnMin = view.findViewById(R.id.btnSubstraction);
